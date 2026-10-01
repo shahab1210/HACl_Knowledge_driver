@@ -1,0 +1,249 @@
+{
+  "continuous_signals": {
+    "Oil_temperature": {
+      "count": 1516948,
+      "mean": 62.644,
+      "std": 6.516,
+      "min": 15.4,
+      "p5": 52.325,
+      "p25": 57.775,
+      "median": 62.7,
+      "p75": 67.25,
+      "p95": 73.525,
+      "p99": 76.175,
+      "max": 89.05,
+      "iqr": 9.475
+    },
+    "Motor_current": {
+      "count": 1516948,
+      "mean": 2.05,
+      "std": 2.302,
+      "min": 0.02,
+      "p5": 0.038,
+      "p25": 0.04,
+      "median": 0.045,
+      "p75": 3.808,
+      "p95": 5.987,
+      "p99": 6.188,
+      "max": 9.295,
+      "iqr": 3.768
+    },
+    "TP2": {
+      "count": 1516948,
+      "mean": 1.368,
+      "std": 3.251,
+      "min": -0.032,
+      "p5": -0.016,
+      "p25": -0.014,
+      "median": -0.012,
+      "p75": -0.01,
+      "p95": 9.59,
+      "p99": 10.352,
+      "max": 10.676,
+      "iqr": 0.004
+    },
+    "TP3": {
+      "count": 1516948,
+      "mean": 8.985,
+      "std": 0.639,
+      "min": 0.73,
+      "p5": 8.138,
+      "p25": 8.492,
+      "median": 8.96,
+      "p75": 9.492,
+      "p95": 9.98,
+      "p99": 10.14,
+      "max": 10.302,
+      "iqr": 1.0
+    },
+    "H1": {
+      "count": 1516948,
+      "mean": 7.568,
+      "std": 3.333,
+      "min": -0.036,
+      "p5": -0.014,
+      "p25": 8.254,
+      "median": 8.784,
+      "p75": 9.374,
+      "p95": 9.916,
+      "p99": 10.114,
+      "max": 10.288,
+      "iqr": 1.12
+    },
+    "DV_pressure": {
+      "count": 1516948,
+      "mean": 0.056,
+      "std": 0.382,
+      "min": -0.032,
+      "p5": -0.024,
+      "p25": -0.022,
+      "median": -0.02,
+      "p75": -0.018,
+      "p95": -0.008,
+      "p99": 2.112,
+      "max": 9.844,
+      "iqr": 0.004
+    },
+    "Reservoirs": {
+      "count": 1516948,
+      "mean": 8.985,
+      "std": 0.638,
+      "min": 0.712,
+      "p5": 8.14,
+      "p25": 8.494,
+      "median": 8.96,
+      "p75": 9.492,
+      "p95": 9.978,
+      "p99": 10.138,
+      "max": 10.3,
+      "iqr": 0.998
+    }
+  },
+  "machine_state_signals": {
+    "COMP": {
+      "description": "Air intake valve control (1.0 = closed/intake blocked, 0.0 = open/compressing)",
+      "is_binary": true,
+      "unique_values_count": 2,
+      "active_percentage": 83.7,
+      "value_counts": {
+        "1.0": 1269620,
+        "0.0": 247328
+      }
+    },
+    "DV_eletric": {
+      "description": "Compressor outlet valve control (1.0 = open under load, 0.0 = closed/offload)",
+      "is_binary": true,
+      "unique_values_count": 2,
+      "active_percentage": 16.06,
+      "value_counts": {
+        "0.0": 1273310,
+        "1.0": 243638
+      }
+    },
+    "Towers": {
+      "description": "Active desiccant drying tower selection (0 = Tower 1, 1 = Tower 2)",
+      "is_binary": true,
+      "unique_values_count": 2,
+      "active_percentage": 91.98,
+      "value_counts": {
+        "1.0": 1395362,
+        "0.0": 121586
+      }
+    },
+    "MPG": {
+      "description": "Main Pressure Governor signal (activates when system pressure drops below 8.2 bar)",
+      "is_binary": true,
+      "unique_values_count": 2,
+      "active_percentage": 83.27,
+      "value_counts": {
+        "1.0": 1263108,
+        "0.0": 253840
+      }
+    },
+    "LPS": {
+      "description": "Low Pressure Safety switch (activates when pressure drops below 7.0 bar critical limit)",
+      "is_binary": true,
+      "unique_values_count": 2,
+      "active_percentage": 0.34,
+      "value_counts": {
+        "0.0": 1511760,
+        "1.0": 5188
+      }
+    },
+    "Pressure_switch": {
+      "description": "Drying towers discharge pressure sensor",
+      "is_binary": true,
+      "unique_values_count": 2,
+      "active_percentage": 99.14,
+      "value_counts": {
+        "1.0": 1503958,
+        "0.0": 12990
+      }
+    },
+    "Oil_level": {
+      "description": "Oil reservoir level sensor (1.0 = low oil level warning)",
+      "is_binary": true,
+      "unique_values_count": 2,
+      "active_percentage": 90.42,
+      "value_counts": {
+        "1.0": 1371557,
+        "0.0": 145391
+      }
+    },
+    "Caudal_impulses": {
+      "description": "Pulse counter representing volumetric airflow delivered from APU to reservoirs",
+      "is_binary": true,
+      "unique_values_count": 2,
+      "active_percentage": 93.71,
+      "value_counts": {
+        "1.0": 1421542,
+        "0.0": 95406
+      }
+    }
+  },
+  "correlation_matrix": {
+    "Oil_temperature": {
+      "Oil_temperature": 1.0,
+      "Motor_current": 0.529,
+      "TP2": 0.251,
+      "TP3": 0.402,
+      "H1": -0.162,
+      "DV_pressure": 0.34,
+      "Reservoirs": 0.402
+    },
+    "Motor_current": {
+      "Oil_temperature": 0.529,
+      "Motor_current": 1.0,
+      "TP2": 0.697,
+      "TP3": 0.414,
+      "H1": -0.6,
+      "DV_pressure": 0.302,
+      "Reservoirs": 0.413
+    },
+    "TP2": {
+      "Oil_temperature": 0.251,
+      "Motor_current": 0.697,
+      "TP2": 1.0,
+      "TP3": -0.011,
+      "H1": -0.961,
+      "DV_pressure": 0.415,
+      "Reservoirs": -0.012
+    },
+    "TP3": {
+      "Oil_temperature": 0.402,
+      "Motor_current": 0.414,
+      "TP2": -0.011,
+      "TP3": 1.0,
+      "H1": 0.225,
+      "DV_pressure": -0.153,
+      "Reservoirs": 1.0
+    },
+    "H1": {
+      "Oil_temperature": -0.162,
+      "Motor_current": -0.6,
+      "TP2": -0.961,
+      "TP3": 0.225,
+      "H1": 1.0,
+      "DV_pressure": -0.426,
+      "Reservoirs": 0.226
+    },
+    "DV_pressure": {
+      "Oil_temperature": 0.34,
+      "Motor_current": 0.302,
+      "TP2": 0.415,
+      "TP3": -0.153,
+      "H1": -0.426,
+      "DV_pressure": 1.0,
+      "Reservoirs": -0.153
+    },
+    "Reservoirs": {
+      "Oil_temperature": 0.402,
+      "Motor_current": 0.413,
+      "TP2": -0.012,
+      "TP3": 1.0,
+      "H1": 0.226,
+      "DV_pressure": -0.153,
+      "Reservoirs": 1.0
+    }
+  }
+}

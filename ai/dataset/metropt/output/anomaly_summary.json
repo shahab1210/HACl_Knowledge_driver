@@ -1,0 +1,158 @@
+{
+  "operating_states": {
+    "Standby": {
+      "count": 829000,
+      "percentage": 54.65,
+      "duration_hours": 2302.8,
+      "mean_oil_temp_c": 59.3,
+      "mean_motor_current_a": 0.04,
+      "mean_reservoir_pressure_bar": 8.69
+    },
+    "Offloaded": {
+      "count": 486325,
+      "percentage": 32.06,
+      "duration_hours": 1350.9,
+      "mean_oil_temp_c": 66.88,
+      "mean_motor_current_a": 3.88,
+      "mean_reservoir_pressure_bar": 9.48
+    },
+    "UnderLoad": {
+      "count": 201623,
+      "percentage": 13.29,
+      "duration_hours": 560.1,
+      "mean_oil_temp_c": 66.19,
+      "mean_motor_current_a": 5.89,
+      "mean_reservoir_pressure_bar": 9.03
+    }
+  },
+  "statistical_anomalies_iqr": {
+    "Oil_temperature": {
+      "method": "IQR",
+      "multiplier": 1.5,
+      "q25": 57.775,
+      "q75": 67.25,
+      "iqr": 9.475,
+      "lower_bound": 43.562,
+      "upper_bound": 81.463,
+      "anomaly_count": 5194,
+      "anomaly_percentage": 0.342
+    },
+    "Motor_current": {
+      "method": "IQR",
+      "multiplier": 1.5,
+      "q25": 0.04,
+      "q75": 3.808,
+      "iqr": 3.768,
+      "lower_bound": -5.611,
+      "upper_bound": 9.459,
+      "anomaly_count": 0,
+      "anomaly_percentage": 0.0
+    },
+    "Reservoirs": {
+      "method": "IQR",
+      "multiplier": 1.5,
+      "q25": 8.494,
+      "q75": 9.492,
+      "iqr": 0.998,
+      "lower_bound": 6.997,
+      "upper_bound": 10.989,
+      "anomaly_count": 4526,
+      "anomaly_percentage": 0.298
+    }
+  },
+  "statistical_anomalies_zscore": {
+    "Oil_temperature": {
+      "method": "Z-score",
+      "threshold_std": 3.0,
+      "mean": 62.644,
+      "std": 6.516,
+      "anomaly_count": 4084,
+      "anomaly_percentage": 0.269
+    },
+    "Motor_current": {
+      "method": "Z-score",
+      "threshold_std": 3.0,
+      "mean": 2.05,
+      "std": 2.302,
+      "anomaly_count": 7,
+      "anomaly_percentage": 0.0
+    },
+    "Reservoirs": {
+      "method": "Z-score",
+      "threshold_std": 3.0,
+      "mean": 8.985,
+      "std": 0.638,
+      "anomaly_count": 4657,
+      "anomaly_percentage": 0.307
+    }
+  },
+  "safety_switch_events": {
+    "lps_trips_count": 5188,
+    "lps_trips_pct": 0.342,
+    "high_temp_80c_count": 3725,
+    "crit_temp_85c_count": 714,
+    "reservoir_below_7bar_count": 4532
+  },
+  "ground_truth_failure_validation": [
+    {
+      "event_id": "EV-01",
+      "name": "Air Leak Failure Event 1",
+      "failure_type": "Air Leak / Excessive Workload",
+      "start": "2020-04-18 00:00:00",
+      "end": "2020-04-18 23:59:59",
+      "reading_count": 8663,
+      "mean_oil_temp_c": 74.13,
+      "max_oil_temp_c": 78.17,
+      "mean_motor_current_a": 5.6,
+      "underload_percentage": 83.6,
+      "duty_cycle_ratio_vs_baseline": 6.29,
+      "lps_trips_count": 0,
+      "anomaly_detected": true
+    },
+    {
+      "event_id": "EV-02",
+      "name": "Air Leak Failure Event 2",
+      "failure_type": "Air Leak / Compressor Stress",
+      "start": "2020-05-29 23:30:00",
+      "end": "2020-05-30 06:00:00",
+      "reading_count": 2360,
+      "mean_oil_temp_c": 75.87,
+      "max_oil_temp_c": 76.65,
+      "mean_motor_current_a": 5.57,
+      "underload_percentage": 79.75,
+      "duty_cycle_ratio_vs_baseline": 6.0,
+      "lps_trips_count": 0,
+      "anomaly_detected": true
+    },
+    {
+      "event_id": "EV-03",
+      "name": "Air Leak Failure Event 3",
+      "failure_type": "Severe Air Leak / Low Pressure Shutdown",
+      "start": "2020-06-05 10:00:00",
+      "end": "2020-06-07 14:30:00",
+      "reading_count": 17315,
+      "mean_oil_temp_c": 75.52,
+      "max_oil_temp_c": 78.03,
+      "mean_motor_current_a": 5.49,
+      "underload_percentage": 62.11,
+      "duty_cycle_ratio_vs_baseline": 4.67,
+      "lps_trips_count": 198,
+      "anomaly_detected": true
+    },
+    {
+      "event_id": "EV-04",
+      "name": "Air Leak Failure Event 4",
+      "failure_type": "Air Leak / Thermal Overheating",
+      "start": "2020-07-15 14:30:00",
+      "end": "2020-07-15 19:00:00",
+      "reading_count": 1622,
+      "mean_oil_temp_c": 83.91,
+      "max_oil_temp_c": 89.05,
+      "mean_motor_current_a": 5.51,
+      "underload_percentage": 52.53,
+      "duty_cycle_ratio_vs_baseline": 3.95,
+      "lps_trips_count": 530,
+      "anomaly_detected": true
+    }
+  ]
+}

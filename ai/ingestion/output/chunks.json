@@ -1,0 +1,610 @@
+{
+  "generated_at": "2026-09-30T06:20:09.200061+00:00",
+  "source_directory": "/Users/shahabahmad/Documents/P_311/ai/knowledge-base",
+  "chunk_size_tokens": 800,
+  "chunk_overlap_tokens": 100,
+  "document_count": 18,
+  "chunk_count": 32,
+  "chunks": [
+    {
+      "chunk_id": "FAULT-001_chunk_001",
+      "document_id": "FAULT-001",
+      "document_type": "fault",
+      "source": "faults/bearing-overheating.md",
+      "chunk_index": 0,
+      "title": "Bearing Overheating",
+      "category": "mechanical",
+      "equipment": "motor",
+      "severity": "high",
+      "sensors": [
+        "temperature",
+        "vibration",
+        "current"
+      ],
+      "text": "# Bearing Overheating\n\n## Description\nBearing overheating occurs when the operating temperature of a rolling element or sleeve bearing exceeds its designed thermal equilibrium, typically due to excessive friction, improper lubrication, mechanical overload, or misalignment. If left unaddressed, thermal degradation of bearing materials and lubricants leads to catastrophic bearing seizure, shaft damage, rotor-stator contact, and unplanned motor shutdown.\n\n## Typical Symptoms\n- Rapid or progressive rise in bearing housing or bearing cap temperature.\n- Distinct metallic rubbing, whining, or squealing acoustic signatures near the bearing end bell.\n- Discoloration, scorching, degradation, or liquefaction and leaking of bearing grease or oil.\n- Increased rotational resistance and elevated localized heat dissipation.\n- Secondary rise in motor drive-end or non-drive-end casing temperature.\n\n## Possible Causes\n- Inadequate lubrication (insufficient grease quantity, dried grease, or oil starvation).\n- Over-greasing or over-lubrication causing excessive fluid friction and churning heat.\n- Use of degraded, oxidized, contaminated, or incorrect lubricant viscosity grade.\n- Excessive radial or axial mechanical preload from shaft misalignment or overtightened belts.\n- Bearing internal clearance reduction due to thermal expansion or incorrect fit on shaft/housing.\n- Contaminant ingress (dust, metal particulate, moisture) accelerating frictional heating.\n\n## Sensor Indicators\n\n| Sensor Parameter | Observed Pattern | Diagnostic Significance | Correlation with Other Readings |\n| :--- | :--- | :--- | :--- |\n| **Temperature** | Sustained high or steeply rising trend above baseline | Primary indicator of thermal stress and elevated friction at bearing point | Directly correlates with bearing housing localized thermal rise |\n| **Vibration** | Elevated overall RMS vibration; emergence of high-frequency friction noise | Indicates mechanical friction, early raceway contact, or imbalance | Often accompanies temperature spikes when degradation is mechanical |\n| **Current** | Moderate increase in motor current or baseline electrical load | Increased mechanical drag and friction torque reflected at motor shaft | Confirms mechanical resistance resisting rotor rotation |\n| **Pressure** | Generally unaffected unless coupled pump experiences shaft binding | Secondary indicator in coupled machinery | Normal or fluctuating if hydraulic system is unloaded |\n| **Humidity** | Ambient humidity unchanged; may promote corrosion if high | Environmental contributing factor | Sustained high humidity may indicate moisture wash-out of grease |\n\n## Recommended Checks\n1. Verify localized bearing housing temperature using a calibrated non-contact infrared pyrometer or contact probe against the sensor reading.\n2. Inspect lubricant condition: check grease reservoir for discoloration, odor, carbonization, contamination, or hardened grease cake.\n3. Check grease relief ports to ensure grease purge paths are open and the cavity is not over-pressurized.\n4. Measure shaft radial and axial runout and inspect coupling alignment (angular and parallel) with dial indicators or laser alignment tools.\n5. Review vibration spectrum for bearing characteristic fault frequencies (BPFO, BPFI, BSF, FTF) or high-frequency friction carpets.\n6. Inspect seal integrity to ensure dust and water exclusions are functioning properly.\n\n## Safety\n- High surface temperature hazard: Exercise extreme caution near bearing housings and motor end bells; wear thermal-resistant PPE.\n- Rotating machinery hazard: Do not touch shafts, couplings, or bearing caps while the machine is energized or rotating.\n- De-energization: Strictly enforce Lockout/Tagout (LOTO) protocols on the motor electrical supply before opening bearing housings, cleaning grease fittings, or performing mechanical checks.\n\n## Related Faults\n- [FAULT-002: Bearing Wear](bearing-wear.md)\n- [FAULT-003: Motor Overheating](motor-overheating.md)\n- [FAULT-005: Excessive Motor Vibration](motor-vibration.md)",
+      "section_heading": null,
+      "token_estimate": 734
+    },
+    {
+      "chunk_id": "FAULT-002_chunk_001",
+      "document_id": "FAULT-002",
+      "document_type": "fault",
+      "source": "faults/bearing-wear.md",
+      "chunk_index": 0,
+      "title": "Bearing Wear",
+      "category": "mechanical",
+      "equipment": "motor",
+      "severity": "high",
+      "sensors": [
+        "vibration",
+        "temperature",
+        "current"
+      ],
+      "text": "# Bearing Wear\n\n## Description\nBearing wear represents the progressive mechanical deterioration and loss of material from the rolling elements, inner raceway, outer raceway, or cage of an industrial bearing. Typically initiated by fatigue, particulate contamination, inadequate lubrication, or electrical discharge machining (EDM) currents, bearing wear manifests as micro-spalling, flaking, pitting, and looseness. Progression leads to severe mechanical clearance expansion, shaft eccentricity, catastrophic cage collapse, and motor rotor jamming.\n\n## Typical Symptoms\n- Sustained increase in mechanical vibration levels, especially in peak and velocity profiles.\n- Persistent rattling, rumbling, growling, or clicking acoustic emission originating from the bearing cavity.\n- Increased radial or axial shaft looseness detected during operation or coast-down.\n- Elevated localized housing temperature arising from raceway roughness and micro-impacts.\n- Presence of metallic particles or dark discoloration in grease or oil sampling residue.\n\n## Possible Causes\n- Normal lifecycle fatigue wear (L10 bearing life reached or exceeded).\n- Abrasive or particulate contamination introduced during maintenance or seal degradation.\n- Sustained operation under excessive vibration, unbalance, or external mechanical shock loads.\n- Lubrication film breakdown (insufficient viscosity, excessive operating heat, or water contamination).\n- Shaft misalignment causing asymmetric load distribution across rolling elements.\n- Fluting or pitting caused by parasitic stray shaft currents (VFD-induced capacitive coupling).\n\n## Sensor Indicators\n\n| Sensor Parameter | Observed Pattern | Diagnostic Significance | Correlation with Other Readings |\n| :--- | :--- | :--- | :--- |\n| **Vibration** | High overall vibration; progressive rise in peak acceleration and velocity | Strongest and earliest indicator of raceway defects and mechanical wear | Precedes severe temperature rise in early-to-mid degradation stages |\n| **Temperature** | Gradual upward baseline drift; localized hot spots on bearing housing | Secondary indicator resulting from micro-friction and impact dissipation | Tracks with vibration progression as surface degradation intensifies |\n| **Current** | Small, high-frequency torque ripples; subtle increase in RMS current | Micro-variations in rotational drag reflected through the air gap and stator | Correlates with mechanical dragging in advanced wear stages |\n| **Pressure** | Steady or nominal unless pump shaft eccentricity compromises seal/impeller | Secondary effect in fluid pumps | Cavitation-induced vibration may mimic or accelerate bearing wear |\n| **Humidity** | Ambient; elevated humidity accelerates corrosive pitting | Environmental contributor | Prolonged high humidity leads to rust and premature spalling |\n\n## Recommended Checks\n1. Perform high-resolution spectral vibration analysis: check for Ball Pass Frequency Outer race (BPFO), Ball Pass Frequency Inner race (BPFI), Ball Spin Frequency (BSF), and Fundamental Train Frequency (FTF) harmonics.\n2. Check crest factor and peak-to-peak acceleration to detect impulsive impacts from surface spalls.\n3. Isolate motor, tag out power, and manually test shaft for radial and axial play using a dial indicator.\n4. Extract lubricant sample and inspect under magnification or perform ferrographic oil analysis for metal debris.\n5. Inspect mechanical seals and oil deflectors for wear, contamination ingress, or oil leakage.\n6. Verify alignment and soft foot conditions across motor foundation and coupling.\n\n## Safety\n- Mechanical failure risk: Severely worn bearings risk sudden cage failure, shaft seizure, and catastrophic motor stall under load.\n- Lockout/Tagout (LOTO): Machine must be fully de-energized, locked, and tagged out prior to physical contact, dial indicator mounting, or manual shaft rotation.\n- Eye and Hand Protection: Wear protective goggles and gloves when handling contaminated lubricant samples and rotating components.\n\n## Related Faults\n- [FAULT-001: Bearing Overheating](bearing-overheating.md)\n- [FAULT-005: Excessive Motor Vibration](motor-vibration.md)\n- [FAULT-004: Motor Overcurrent](motor-overcurrent.md)",
+      "section_heading": null,
+      "token_estimate": 760
+    },
+    {
+      "chunk_id": "FAULT-009_chunk_001",
+      "document_id": "FAULT-009",
+      "document_type": "fault",
+      "source": "faults/high-pressure.md",
+      "chunk_index": 0,
+      "title": "High Pressure",
+      "category": "hydraulic",
+      "equipment": "pump",
+      "severity": "high",
+      "sensors": [
+        "pressure",
+        "current",
+        "temperature"
+      ],
+      "text": "# High Pressure\n\n## Description\nA high-pressure fault condition occurs when fluid pressure within the pump casing, discharge manifold, or downstream distribution network exceeds rated design limits. Excessive pressure puts severe mechanical stress on pipe walls, pump casings, gaskets, and mechanical seals. In positive displacement pumps, unchecked high pressure can cause catastrophic casing rupture or motor stall. In centrifugal pumps, prolonged high pressure (operating near or at shut-off head) leads to rapid fluid churning, violent overheating of the fluid volume inside the casing, vapor expansion, and mechanical seal destruction.\n\n## Typical Symptoms\n- Pressure sensors and analog pressure gauges indicating values consistently exceeding normal upper operating thresholds.\n- Frequent popping or continuous venting of pressure safety relief valves (PRV) or rupture disks.\n- Motor straining, drawing high current (in positive displacement pumps) or excessive casing heating (in dead-headed centrifugal pumps).\n- Deformed pipe hangers, pipe hammering, or strained flange connections.\n- Weeping or extrusion of flange gaskets and premature failure of pump mechanical seals.\n\n## Possible Causes\n- Downstream blockage: Closed or throttled isolation valve, clogged filter/strainer, or blocked line orifice.\n- Sluggish or jammed pressure regulating valve, backpressure control valve, or downstream control valve failing closed.\n- Solidification, crystallization, or excessive viscosity increase of process fluid in cold or uninsulated lines.\n- Over-speed operation of a variable speed drive (VFD) driving the pump beyond rated RPM.\n- Over-filling or hydraulic lock in closed-loop thermal expansion systems without accumulator cushioning.\n- Starting a positive displacement pump against a closed discharge valve.\n\n## Sensor Indicators\n\n| Sensor Parameter | Observed Pattern | Diagnostic Significance | Correlation with Other Readings |\n| :--- | :--- | :--- | :--- |\n| **Pressure** | Sustained high reading or sharp escalation above safe operational threshold | Primary and direct indicator of downstream restriction or hydraulic overpressure | Direct measure defining the fault |\n| **Current** | Significantly high in positive displacement pumps; low to moderate in dead-headed centrifugal pumps | Key discriminator for pump type and operating state under high-pressure conditions | High pressure + high current indicates positive displacement overload |\n| **Temperature** | Steep rise in pump casing and seal cavity temperature under dead-head conditions | Energy input from rotating impeller converts directly into fluid thermal energy | High pressure + high pump casing temp confirms dead-head operation |\n| **Vibration** | Elevated low-frequency vibration or acoustic resonance from hydraulic turbulence | Hydraulic shock and pressure wave reflections against casing cutwater | Correlates with fluid pulsations and hydraulic strain |\n| **Humidity** | Ambient; may spike if safety relief valve discharges steam or hot fluid | Secondary indicator of safety relief discharge | Elevated humidity confirms relief valve release into environment |\n\n## Recommended Checks\n1. Immediately inspect line lineup: verify all manual and automated downstream isolation valves are in their correct operating position.\n2. Check differential pressure across downstream inline filters, heat exchangers, strainers, or check valves.\n3. Test operation and setpoint of pressure safety valves (PSV) and automated pressure relief bypass circuits.\n4. Verify pump speed command and feedback from the variable frequency drive (VFD).\n5. In dead-head centrifugal scenarios, inspect casing temperature and vent vapor pockets safely after cooling.\n6. Check for product freezing, waxing, or crystallization in heat-traced lines or ambient exposed piping.",
+      "section_heading": null,
+      "token_estimate": 724
+    },
+    {
+      "chunk_id": "FAULT-009_chunk_002",
+      "document_id": "FAULT-009",
+      "document_type": "fault",
+      "source": "faults/high-pressure.md",
+      "chunk_index": 1,
+      "title": "High Pressure",
+      "category": "hydraulic",
+      "equipment": "pump",
+      "severity": "high",
+      "sensors": [
+        "pressure",
+        "current",
+        "temperature"
+      ],
+      "text": "# High Pressure\n\n## Safety\n- Catastrophic rupture risk: Overpressured vessels, pump casings, and piping can suffer explosive failure, throwing metal fragments.\n- Thermal scalding: Dead-headed pumps turn trapped water into superheated steam within minutes; opening drains or vents can cause severe steam burns.\n- Pressure Relief: Always ensure certified pressure relief devices are installed upstream of any potential block valve.\n- Lockout/Tagout (LOTO): Depressurize system completely and tag out motor power prior to breaking flanges or disassembling valves.\n\n## Related Faults\n- [FAULT-004: Motor Overcurrent](motor-overcurrent.md)\n- [FAULT-003: Motor Overheating](motor-overheating.md)\n- [FAULT-008: Low Pressure](low-pressure.md)",
+      "section_heading": null,
+      "token_estimate": 125
+    },
+    {
+      "chunk_id": "FAULT-008_chunk_001",
+      "document_id": "FAULT-008",
+      "document_type": "fault",
+      "source": "faults/low-pressure.md",
+      "chunk_index": 0,
+      "title": "Low Pressure",
+      "category": "hydraulic",
+      "equipment": "pump",
+      "severity": "medium",
+      "sensors": [
+        "pressure",
+        "current",
+        "vibration"
+      ],
+      "text": "# Low Pressure\n\n## Description\nA low-pressure condition in an industrial pumping system occurs when the static or dynamic fluid discharge pressure falls below the acceptable operating design envelope. In continuous-process networks, insufficient pressure disrupts downstream delivery, starves cooling jackets or lubrication circuits, causes improper atomization or mixing in chemical reactors, and indicates hydraulic inefficiencies, line leakage, or mechanical deterioration of the pump impeller and casing wear rings.\n\n## Typical Symptoms\n- Manometer, gauge, or inline pressure transmitter readings consistently below normal process setpoint.\n- Insufficient flow rate or delivery failure at downstream discharge terminals.\n- Fluctuating or lagging response to downstream process demand increases.\n- Potential high-speed rotation or cavitation in centrifugal stages if operating excessively far right on the pump head curve.\n- Accumulation of liquid or visible leakage along pipeline joints, flanges, or valve packings.\n\n## Possible Causes\n- Downstream piping breach, rupture, open drain valve, or major flange gasket leak.\n- Severely worn impeller vanes, eroded volute cutwater, or excessive clearance between impeller and wear rings.\n- Internal fluid recirculation or bypass valve stuck open.\n- Inadequate pump operational speed (VFD underspeed, belt slip, or low supply frequency).\n- Upstream supply restriction or partially clogged suction strainer limiting available fluid mass flow.\n- Entrained air, gas bubbles, or partial loss of prime causing loss of effective hydraulic density.\n\n## Sensor Indicators\n\n| Sensor Parameter | Observed Pattern | Diagnostic Significance | Correlation with Other Readings |\n| :--- | :--- | :--- | :--- |\n| **Pressure** | Steadily depressed or sudden sharp drop below operating limits | Primary direct indicator of hydraulic pressure deficiency | Central indicator defining the fault condition |\n| **Current** | Decreased or higher depending on pump curve (often higher if high flow runaway; lower if starved) | Corroborating indicator distinguishing pipeline break (high flow) from suction starvation | Low pressure + high current indicates downstream pipe rupture or open valve |\n| **Vibration** | Normal, or elevated if low pressure induces internal flow recirculation / cavitation | Secondary indicator for hydraulic turbulence or mechanical defect | Low pressure + high vibration indicates cavitation or internal recirculation |\n| **Temperature** | Generally normal; elevated if internal liquid recirculation churns trapped fluid | Secondary thermal indicator | Can rise if pump is bypassing fluid continuously in a short loop |\n| **Humidity** | Localized increase if fluid leakage or spray is escaping into ambient air | Environmental leak detection signal | High humidity in pipe trench or skid suggests active pipe rupture or leak |\n\n## Recommended Checks\n1. Inspect entire pipeline route for external leaks, blown gaskets, burst hoses, or inadvertently opened bypass/drain valves.\n2. Verify suction line pressure, fluid reservoir level, and suction strainer differential pressure.\n3. Compare discharge pressure and motor speed against the pump manufacturer head-capacity (H-Q) curve.\n4. Check internal wear clearances: measure gap between impeller shroud and casing wear ring (replace if clearance exceeds manufacturer tolerance).\n5. Inspect non-return (check) valves to ensure they are not stuck partially open or allowing reverse flow.\n6. Verify calibration of inline pressure transmitters and verify impulse line tubing for clogs or air bubbles.\n\n## Safety\n- High-velocity fluid spray hazard: Pinhole leaks in pressurized lines can cause dangerous fluid injection injuries; never inspect lines with bare hands.\n- Slip and environmental hazard: Leaking industrial fluids, lubricants, or chemicals create slip hazards and environmental contamination.\n- Lockout/Tagout (LOTO): De-energize drive motor and isolate and tag hydraulic line valves before opening strainers or uncoupling piping.\n\n## Related Faults\n- [FAULT-006: Pump Cavitation](pump-cavitation.md)\n- [FAULT-007: Pump Dry Running](pump-dry-running.md)\n- [FAULT-010: Sensor Anomaly](sensor-anomaly.md)",
+      "section_heading": null,
+      "token_estimate": 798
+    },
+    {
+      "chunk_id": "FAULT-004_chunk_001",
+      "document_id": "FAULT-004",
+      "document_type": "fault",
+      "source": "faults/motor-overcurrent.md",
+      "chunk_index": 0,
+      "title": "Motor Overcurrent",
+      "category": "electrical",
+      "equipment": "motor",
+      "severity": "high",
+      "sensors": [
+        "current",
+        "temperature",
+        "vibration"
+      ],
+      "text": "# Motor Overcurrent\n\n## Description\nMotor overcurrent occurs when the electric current drawn by the motor stator windings persistently exceeds the continuous Full Load Amperage (FLA) or nameplate design capacity. Overcurrent conditions can be caused by mechanical overloads, electrical supply deviations, inter-turn winding deterioration, or rotor bar defects. Sustained overcurrent rapidly accelerates I²R resistive heating in the windings, trips protective overcurrent relays or circuit breakers, and risks permanent insulation breakdown.\n\n## Typical Symptoms\n- Continuous current readings substantially higher than motor nameplate full-load amperage.\n- Frequent tripping of electronic motor protective relays, thermal magnetic breakers, or VFD overcurrent fault trips.\n- Observable motor hum, audible straining noise under operational duty, or diminished motor speed (increased slip).\n- Accelerated heating of stator windings, supply cabling, and terminal junctions.\n- In severe electrical breakdown cases, arcing, blown fuses, or scorched terminal lugs.\n\n## Possible Causes\n- Driven equipment overload (jammed pump impeller, clogged discharge pipe, mechanical drag, excessive product viscosity).\n- Low supply voltage (forcing the motor to draw higher current to supply rated shaft output power for constant-torque loads).\n- Severe voltage unbalance among supply phases (a 1% voltage unbalance can trigger an 8-10% current unbalance).\n- Stator winding degradation, turn-to-turn micro-faults, or single-phasing condition.\n- Mechanical binding or severe misalignment in bearings, couplings, or driven process machinery.\n- High inertia start-ups or excessive duty-cycle cycling without adequate thermal cooling recovery.\n\n## Sensor Indicators\n\n| Sensor Parameter | Observed Pattern | Diagnostic Significance | Correlation with Other Readings |\n| :--- | :--- | :--- | :--- |\n| **Current** | Significantly higher than normal baseline and exceeding FLA rating | Primary and direct indicator of electrical or mechanical overcurrent condition | Direct quantitative measure of motor electrical load |\n| **Temperature** | Rising gradually or rapidly following current elevation | Consequence of I²R resistive losses in the copper windings and iron core | Tracks current with a thermal lag depending on motor mass and cooling |\n| **Vibration** | Normal, or elevated if overcurrent is driven by mechanical binding or unbalance | Corroborating indicator for mechanical root causes vs. electrical supply issues | High vibration + high current points to mechanical jamming or misalignment |\n| **Pressure** | Abnormally high in discharge lines if flow resistance causes hydraulic overload | Systemic indicator in fluid transfer loops | High pump discharge pressure directly induces motor overcurrent |\n| **Humidity** | Generally neutral; extreme humidity can compromise insulation resistance | Secondary contributing factor | Can lead to ground leakage currents if insulation is degraded |\n\n## Recommended Checks\n1. Compare measured line current on each phase against the motor nameplate FLA and Service Factor (SF).\n2. Measure phase-to-phase line voltages under full operating load; determine voltage unbalance and check for under-voltage.\n3. Check the driven load: uncouple the motor and run uncoupled to isolate whether overcurrent is driven by internal motor faults or external machine drag.\n4. Manually rotate the uncoupled pump/shaft by hand (with power locked out) to check for binding, rubbing, or tight spots.\n5. Inspect downstream valves, line blockages, or high-viscosity product delivery issues contributing to pump overload.\n6. Verify overcurrent protection relay settings, VFD current limit parameters, and overload trip curves.\n\n## Safety\n- High electrical arc-flash hazard: Do not open energized motor control centers or terminal boxes without appropriate NFPA 70E arc-rated PPE.\n- Rapid thermal rise: Overloaded motors and feeder conduits can reach flashpoint temperatures; keep combustible materials clear.\n- Lockout/Tagout (LOTO): Isolate and verify zero energy before opening electrical junction boxes or performing mechanical load uncoupling.",
+      "section_heading": null,
+      "token_estimate": 786
+    },
+    {
+      "chunk_id": "FAULT-004_chunk_002",
+      "document_id": "FAULT-004",
+      "document_type": "fault",
+      "source": "faults/motor-overcurrent.md",
+      "chunk_index": 1,
+      "title": "Motor Overcurrent",
+      "category": "electrical",
+      "equipment": "motor",
+      "severity": "high",
+      "sensors": [
+        "current",
+        "temperature",
+        "vibration"
+      ],
+      "text": "# Motor Overcurrent\n\n## Safety\n- High electrical arc-flash hazard: Do not open energized motor control centers or terminal boxes without appropriate NFPA 70E arc-rated PPE.\n- Rapid thermal rise: Overloaded motors and feeder conduits can reach flashpoint temperatures; keep combustible materials clear.\n- Lockout/Tagout (LOTO): Isolate and verify zero energy before opening electrical junction boxes or performing mechanical load uncoupling.\n\n## Related Faults\n- [FAULT-003: Motor Overheating](motor-overheating.md)\n- [FAULT-009: High Pressure](high-pressure.md)\n- [FAULT-005: Excessive Motor Vibration](motor-vibration.md)",
+      "section_heading": null,
+      "token_estimate": 102
+    },
+    {
+      "chunk_id": "FAULT-003_chunk_001",
+      "document_id": "FAULT-003",
+      "document_type": "fault",
+      "source": "faults/motor-overheating.md",
+      "chunk_index": 0,
+      "title": "Motor Overheating",
+      "category": "thermal",
+      "equipment": "motor",
+      "severity": "critical",
+      "sensors": [
+        "temperature",
+        "current",
+        "vibration"
+      ],
+      "text": "# Motor Overheating\n\n## Description\nMotor overheating is an operating condition where the stator winding insulation, rotor, or motor frame exceeds the designated maximum thermal limit (such as NEMA or IEC insulation classes B, F, or H). Thermal stress is one of the leading causes of premature electric motor failure. Operating a motor above its rated insulation temperature reduces winding insulation life exponentially (the Arrhenius rule states insulation life halves for roughly every 10 °C rise above thermal class), ultimately causing turn-to-turn shorts, ground faults, and catastrophic motor burnout.\n\n## Typical Symptoms\n- Abnormally high casing, stator, or bearing frame surface temperatures detectable by touch or thermal imaging.\n- Burning odor of varnish, insulation resin, or overheated cable jacket material.\n- Tripping of thermal overload relays, motor circuit protectors (MCP), or embedded RTD/PTC alarms.\n- Discoloration or blistered paint on the motor stator frame.\n- Reduced motor speed or increased acoustic drone under load.\n\n## Possible Causes\n- Electrical overload: Motor operating above rated shaft horsepower or service factor for prolonged durations.\n- High supply voltage, low supply voltage, or phase voltage unbalance (even a 2-3% voltage unbalance causes substantial winding heating).\n- Restricted or blocked cooling airflow (clogged fan cowl, dust accumulation on motor cooling fins, broken fan impellers).\n- Excessive ambient temperature or restricted enclosure ventilation in the operating environment.\n- High start-stop duty cycle exceeding the motor's rated thermal capacity and starts-per-hour limit.\n- Mechanical binding, severe bearing degradation, or pump downstream clogging exerting excessive counter-torque.\n- Harmonic heating caused by variable frequency drives (VFD) without appropriate dV/dt or sine-wave filtering.\n\n## Sensor Indicators\n\n| Sensor Parameter | Observed Pattern | Diagnostic Significance | Correlation with Other Readings |\n| :--- | :--- | :--- | :--- |\n| **Temperature** | High, sustained or escalating trend across motor body and stator | Primary symptom confirming thermal overload | Directly matches thermal dissipation trends across stator |\n| **Current** | Consistently elevated above full-load amperage (FLA) rating | Direct root cause indicator if overheating is due to electrical overload | Strong correlation with temperature rise when current is sustained above FLA |\n| **Vibration** | Normal to moderately elevated (thermal expansion unbalance or bearing friction) | Secondary or contributing factor; mechanical drag increases current | Elevated vibration combined with high current indicates mechanical binding |\n| **Pressure** | High in downstream pumping lines if flow restriction creates motor overload | Indirect indicator in pumping systems | High discharge pressure correlates with motor overcurrent and thermal rise |\n| **Humidity** | High ambient humidity combined with thermal cycling may degrade winding insulation | Environmental factor | Condensation within enclosure when cooled down accelerates insulation breakdown |\n\n## Recommended Checks\n1. Measure surface temperature profile using an infrared camera to locate hotspots (stator core vs. drive-end bearing vs. cooling fins).\n2. Measure three-phase operating currents and phase voltages using a true-RMS clamp meter; calculate voltage unbalance percentage.\n3. Verify that cooling air intake and discharge pathways are clean, fan cowl is unobstructed, and external cooling fins are free of oil and debris.\n4. Inspect external cooling fan on the non-drive-end to ensure it is intact and securely keyed to the shaft.\n5. Check motor nameplate ratings against actual operating duty (service factor, ambient rating, continuous duty rating S1).\n6. Perform winding insulation resistance (Megger test) and winding resistance balance test when motor is safely isolated and de-energized.",
+      "section_heading": null,
+      "token_estimate": 754
+    },
+    {
+      "chunk_id": "FAULT-003_chunk_002",
+      "document_id": "FAULT-003",
+      "document_type": "fault",
+      "source": "faults/motor-overheating.md",
+      "chunk_index": 1,
+      "title": "Motor Overheating",
+      "category": "thermal",
+      "equipment": "motor",
+      "severity": "critical",
+      "sensors": [
+        "temperature",
+        "current",
+        "vibration"
+      ],
+      "text": "# Motor Overheating\n\n## Safety\n- Burn hazard: Motor casing and terminal enclosure can reach temperatures well in excess of 90 °C; avoid unshielded skin contact.\n- Fire/Explosion hazard: Severely overheated motors present fire risks in the presence of volatile dust, fibers, or chemical vapors.\n- Electrical Isolation: Adhere strictly to LOTO procedures before inspecting the terminal box, measuring winding resistance, or opening cooling shrouds.\n\n## Related Faults\n- [FAULT-004: Motor Overcurrent](motor-overcurrent.md)\n- [FAULT-001: Bearing Overheating](bearing-overheating.md)\n- [FAULT-009: High Pressure](high-pressure.md)",
+      "section_heading": null,
+      "token_estimate": 106
+    },
+    {
+      "chunk_id": "FAULT-005_chunk_001",
+      "document_id": "FAULT-005",
+      "document_type": "fault",
+      "source": "faults/motor-vibration.md",
+      "chunk_index": 0,
+      "title": "Excessive Motor Vibration",
+      "category": "mechanical",
+      "equipment": "motor",
+      "severity": "high",
+      "sensors": [
+        "vibration",
+        "temperature",
+        "current"
+      ],
+      "text": "# Excessive Motor Vibration\n\n## Description\nExcessive motor vibration refers to oscillatory motion or kinetic shocks within the motor frame and rotating assembly that exceed acceptable ISO 10816 / ISO 20816 vibration severity standards. Unchecked vibration induces cyclic mechanical fatigue in motor components, accelerates bearing deterioration, loosens foundation mounting bolts, degrades mechanical couplings, and can cause catastrophic rotor-to-stator air-gap rubbing.\n\n## Typical Symptoms\n- Palpable shaking, trembling, or rocking motion of the motor frame, baseplate, or coupled piping.\n- Pronounced acoustic humming, buzzing, rattling, or beat frequencies that pulse with rotational frequency.\n- Loose, backed-out, or fractured hold-down bolts, foundation grouting cracks, or distorted shim packs.\n- Rapidly accelerating wear patterns on flexible coupling inserts, belts, or drive pulleys.\n- Premature failure of rolling element bearings at intervals far below expected L10 design life.\n\n## Possible Causes\n- Rotor unbalance caused by uneven material deposition, loss of balance weights, or asymmetric rotor casting.\n- Shaft angular or parallel misalignment between motor and driven machinery.\n- Soft foot condition (uneven foot contact with baseplate creating frame distortion).\n- Mechanical looseness (loose foundation bolts, cracked baseframe, or worn bearing housing fits).\n- Bent or eccentric motor shaft resulting from handling damage or thermal bow.\n- Electrical unbalance: Stator eccentricity, broken rotor bars, or asymmetric air gaps generating 2x line frequency magnetic forces.\n- Structural resonance: Operating speed coinciding with a natural resonant frequency of the motor support structure.\n\n## Sensor Indicators\n\n| Sensor Parameter | Observed Pattern | Diagnostic Significance | Correlation with Other Readings |\n| :--- | :--- | :--- | :--- |\n| **Vibration** | Overall RMS velocity and peak acceleration consistently above operational thresholds | Primary and direct indicator of dynamic mechanical and structural instability | Dominant diagnostic variable across multiple axes |\n| **Temperature** | Elevated bearing housing and frame temperatures; progressive rise | Result of secondary friction and cyclic energy dissipation in bearings and joints | Follows vibration rise when misalignment or bearing friction is involved |\n| **Current** | Periodic amplitude modulation or sidebands around supply line frequency | Electrical or dynamic eccentricity reflects cyclic air-gap modulation into stator current | Current spectral sidebands confirm rotor bar or air-gap defects |\n| **Pressure** | Oscillations or pressure pulsations in fluid systems coupled to vibrating motor | Hydraulic transmission of rotational shaking | Correlates with fluid line pulsation or impeller blade-pass frequencies |\n| **Humidity** | Neutral; does not directly cause vibration | Environmental baseline parameter | High moisture combined with vibration accelerates structural corrosion |\n\n## Recommended Checks\n1. Perform tri-axial vibration spectrum analysis (horizontal, vertical, axial):\n   - Dominant 1x RPM suggests unbalance or bent shaft.\n   - Dominant 2x RPM with high axial component indicates angular or offset misalignment.\n   - Harmonics (3x, 4x, 5x RPM) with directional spikes indicate mechanical looseness.\n   - 2x electrical line frequency spikes (100 Hz or 120 Hz) indicate dynamic/static air-gap eccentricity.\n2. Check for soft foot: Loosen one hold-down bolt at a time while monitoring deflection with a dial indicator; max allowable lift is typically < 0.05 mm.\n3. Check shaft alignment using a precision dual-laser alignment system across cold and thermal-growth conditions.\n4. Inspect foundation integrity, structural welds, grouting, and torque on all base bolts.\n5. Inspect flexible coupling element for degradation, backlash, or elastomeric shearing.",
+      "section_heading": null,
+      "token_estimate": 727
+    },
+    {
+      "chunk_id": "FAULT-005_chunk_002",
+      "document_id": "FAULT-005",
+      "document_type": "fault",
+      "source": "faults/motor-vibration.md",
+      "chunk_index": 1,
+      "title": "Excessive Motor Vibration",
+      "category": "mechanical",
+      "equipment": "motor",
+      "severity": "high",
+      "sensors": [
+        "vibration",
+        "temperature",
+        "current"
+      ],
+      "text": "# Excessive Motor Vibration\n\n## Safety\n- Mechanical projectile hazard: Structural components, balance weights, or sheared coupling bolts can detach at high operational speeds.\n- Hand entrapment: Never apply hand contact or hand-held measurement devices to unguarded rotating shafts or pulleys.\n- Lockout/Tagout (LOTO): Machine must be de-energized, verified zero-energy, and locked out before performing bolt torque checks, alignment corrections, or coupling inspections.\n\n## Related Faults\n- [FAULT-002: Bearing Wear](bearing-wear.md)\n- [FAULT-001: Bearing Overheating](bearing-overheating.md)\n- [FAULT-004: Motor Overcurrent](motor-overcurrent.md)",
+      "section_heading": null,
+      "token_estimate": 103
+    },
+    {
+      "chunk_id": "FAULT-006_chunk_001",
+      "document_id": "FAULT-006",
+      "document_type": "fault",
+      "source": "faults/pump-cavitation.md",
+      "chunk_index": 0,
+      "title": "Pump Cavitation",
+      "category": "hydraulic",
+      "equipment": "pump",
+      "severity": "critical",
+      "sensors": [
+        "pressure",
+        "vibration",
+        "current"
+      ],
+      "text": "# Pump Cavitation\n\n## Description\nPump cavitation occurs when the local static pressure inside a centrifugal or positive displacement pump drops below the vapor pressure of the pumped liquid, causing vapor bubbles (cavities) to form in the fluid stream. When these vapor bubbles travel into regions of higher pressure within the impeller vanes or volute casing, they violently implode. These implosions generate localized micro-jets with shock pressures exceeding thousands of atmospheres, eroding metal surfaces (pitting), causing severe structural vibration, reducing pump head and flow capacity, and ultimately destroying impellers, mechanical seals, and bearings.\n\n## Typical Symptoms\n- Characteristic loud rattling, popping, or crackling noise often described as \"pumping gravel, marbles, or rocks.\"\n- High-frequency, random, broad-band vibration concentrated in the pump casing and bearing housings.\n- Severe fluctuations and degradation in pump discharge pressure and delivered flow rate.\n- Premature failure of mechanical seals and rapid deterioration of pump shaft bearings.\n- Severe pitting, sponginess, and metal erosion on impeller vane suction surfaces and shroud walls upon teardown.\n\n## Possible Causes\n- Inadequate Net Positive Suction Head Available (NPSHa is less than NPSHr required by pump manufacturer).\n- Suction line restrictions: Clogged suction strainer, partially closed suction valve, or obstructed piping.\n- Suction lift too high or liquid source level dropping below minimum submerged intake level.\n- Elevated fluid temperature causing an increase in fluid vapor pressure without corresponding pressure elevation.\n- Fluid velocity too high through undersized suction piping or sharp elbows placed immediately adjacent to the pump suction flange.\n- Operating the pump too far out on the performance curve (excessive flow rate) or near shut-off head (internal recirculation cavitation).\n\n## Sensor Indicators\n\n| Sensor Parameter | Observed Pattern | Diagnostic Significance | Correlation with Other Readings |\n| :--- | :--- | :--- | :--- |\n| **Pressure** | Fluctuating, erratic, or depressed discharge pressure; abnormally low suction pressure | Direct hydraulic indicator of vapor pocket formation and loss of hydraulic coupling | Erratic pressure directly correlates with erratic vibration bursts |\n| **Vibration** | Sharp elevation in high-frequency broadband vibration (often > 2 kHz to ultrasonic) | Caused by energy shockwaves from bubble implosions against casing walls | High vibration coincides with discharge pressure drops and instability |\n| **Current** | Unstable, erratic, or depressed motor current fluctuations | Density fluctuations from liquid/vapor mix reduce and destabilize load on motor | Lower or swinging current distinguishes cavitation from mechanical binding |\n| **Temperature** | Mild to moderate rise in pump casing and seal flush temperature | Secondary result of fluid recirculating or friction in poorly lubricated seals | Can rise if internal recirculation cavitation is occurring |\n| **Humidity** | Ambient; may rise if mechanical seal leaks vaporized fluid into surroundings | Secondary environmental indicator | Vapor release from damaged seals increases localized relative humidity |\n\n## Recommended Checks\n1. Calculate and compare NPSHa against manufacturer NPSHr curve for the actual operating flow rate.\n2. Inspect suction line: Check suction strainer for debris, ensure suction isolation valves are 100% fully open, and verify pipe run straightness.\n3. Check fluid temperature at suction; verify if process liquid has experienced unexpected thermal rise altering its vapor point.\n4. Review vibration spectral data: Look for characteristic broadband \"cavitation floor\" noise across high frequencies rather than clean discrete 1x/2x peaks.\n5. Check pump discharge pressure and flow meter readings against the published head-capacity (H-Q) pump curve.\n6. Inspect mechanical seal faces and gland flush lines for vapor locking, leakage, or dry running symptoms.",
+      "section_heading": null,
+      "token_estimate": 775
+    },
+    {
+      "chunk_id": "FAULT-006_chunk_002",
+      "document_id": "FAULT-006",
+      "document_type": "fault",
+      "source": "faults/pump-cavitation.md",
+      "chunk_index": 1,
+      "title": "Pump Cavitation",
+      "category": "hydraulic",
+      "equipment": "pump",
+      "severity": "critical",
+      "sensors": [
+        "pressure",
+        "vibration",
+        "current"
+      ],
+      "text": "# Pump Cavitation\n\n## Safety\n- Hydraulic pressure surge hazard: Collapsing vapor pockets can induce violent pressure spikes and water hammer, threatening pipe integrity.\n- Chemical/Fluid spray: Leaking mechanical seals or blown gaskets caused by cavitation vibration can spray hazardous or hot fluids.\n- Isolation and depressurization: Verify zero mechanical, hydraulic, and electrical energy via LOTO before opening pump strainers, vents, or casing flanges.\n\n## Related Faults\n- [FAULT-007: Pump Dry Running](pump-dry-running.md)\n- [FAULT-008: Low Pressure](low-pressure.md)\n- [FAULT-005: Excessive Motor Vibration](motor-vibration.md)",
+      "section_heading": null,
+      "token_estimate": 107
+    },
+    {
+      "chunk_id": "FAULT-007_chunk_001",
+      "document_id": "FAULT-007",
+      "document_type": "fault",
+      "source": "faults/pump-dry-running.md",
+      "chunk_index": 0,
+      "title": "Pump Dry Running",
+      "category": "hydraulic",
+      "equipment": "pump",
+      "severity": "critical",
+      "sensors": [
+        "current",
+        "pressure",
+        "temperature"
+      ],
+      "text": "# Pump Dry Running\n\n## Description\nPump dry running occurs when a pump operates without sufficient liquid inside the casing and internal passages. Fluid pumps rely on the pumped liquid not only to generate hydraulic head and flow, but crucially to lubricate and cool internal wear rings, bushings, sleeve bearings, and mechanical seal faces. Operating dry causes immediate loss of hydraulic load, thermal destruction of seal faces within seconds, galling or seizing of rotating wear rings, thermal distortion of the shaft, and catastrophic pump failure.\n\n## Typical Symptoms\n- Sudden drop of motor current to near no-load baseline amperage.\n- Complete loss of pump discharge pressure and zero fluid flow in the process line.\n- Intense squealing, screaming, or rattling noise from unlubricated seal faces and contact rings.\n- Rapid, severe temperature spike on the stuffing box, seal gland, and pump casing.\n- Visible smoke, vapor emissions, or charred seal elastomers around the shaft gland.\n\n## Possible Causes\n- Empty supply reservoir, tank dry-out, or liquid level dropping below intake pipe suction bell.\n- Closed suction isolation valve or completely blocked suction strainer.\n- Loss of pump prime or air-binding within the pump casing and suction volute.\n- Vapor pocket entrapment following improper system startup or incomplete venting procedures.\n- Upstream pipe rupture, foot-valve failure, or false level transmitter reading in suction vessel.\n\n## Sensor Indicators\n\n| Sensor Parameter | Observed Pattern | Diagnostic Significance | Correlation with Other Readings |\n| :--- | :--- | :--- | :--- |\n| **Current** | Drops abruptly to no-load motor current level | Key diagnostic indicator; fluid pump operates with zero hydraulic work | Coincides directly with zero discharge pressure |\n| **Pressure** | Plummets to zero or ambient atmospheric head | Primary hydraulic indicator confirming absence of fluid displacement | Correlates with drop in electrical current |\n| **Temperature** | Rapid, intense temperature spike at mechanical seal and pump casing | Result of dry friction between stationary and rotating seal faces / wear rings | Rises rapidly while current remains minimal |\n| **Vibration** | Variable: high friction squeal or low hydraulic turbulence vibration | Reflects mechanical rubbing without hydraulic damping | High-frequency friction spikes without hydraulic fluid pulses |\n| **Humidity** | May rise if residual fluid flashes into steam around hot seal faces | Secondary environmental indicator | Steam release near gland can register localized humidity increase |\n\n## Recommended Checks\n1. Immediately check motor current draw; confirm whether the motor is spinning with minimal electrical load (no-load amps).\n2. Inspect liquid level and suction tank transmitters; verify actual physical liquid level via sight glass.\n3. Check status of all suction line isolation valves and automated control valves.\n4. Verify whether the pump volute and suction line are properly vented and primed with liquid.\n5. Inspect mechanical seal faces for thermal cracking (heat checking), blistered carbon, or melted elastomer O-rings.\n6. Once de-energized, check if the pump shaft can still be freely turned by hand; check for galling or seizure between impeller wear rings and casing.\n\n## Safety\n- Immediate equipment damage: Dry running must trigger immediate automatic shutdown to avoid seal explosion or shaft seizure.\n- Thermal flash / Pressure hazard: Never suddenly inject cold liquid into a dry-run overheated pump casing; thermal shock can shatter cast iron/alloy volutes.\n- Toxic / Hot Vapor Release: Scorched seal faces can release toxic decomposition gases or superheated steam.\n- Lockout/Tagout (LOTO): Isolate power and hydraulic pressure before opening pump casing or disassembling the seal gland.\n\n## Related Faults\n- [FAULT-006: Pump Cavitation](pump-cavitation.md)\n- [FAULT-008: Low Pressure](low-pressure.md)\n- [FAULT-001: Bearing Overheating](bearing-overheating.md)",
+      "section_heading": null,
+      "token_estimate": 798
+    },
+    {
+      "chunk_id": "FAULT-010_chunk_001",
+      "document_id": "FAULT-010",
+      "document_type": "fault",
+      "source": "faults/sensor-anomaly.md",
+      "chunk_index": 0,
+      "title": "Sensor Anomaly",
+      "category": "instrumentation",
+      "equipment": "sensor",
+      "severity": "medium",
+      "sensors": [
+        "temperature",
+        "vibration",
+        "current",
+        "pressure",
+        "humidity"
+      ],
+      "text": "# Sensor Anomaly\n\n## Description\nA sensor anomaly occurs when an industrial IoT instrumentation channel generates readings that are physically implausible, frozen, erratic, corrupted, or statistically disconnected from actual machine physics. Such anomalies stem from hardware degradation, loose wiring, signal grounding loops, environmental moisture ingress, analog-to-digital converter (ADC) saturation, or telemetry packet corruption. Failing to distinguish sensor anomalies from genuine machinery faults leads to false alarms, unnecessary emergency shutdowns, or masked catastrophic failures.\n\n## Typical Symptoms\n- Unrealistic step changes (e.g., instantaneous jump from 30 °C to 120 °C or zero within one sampling period).\n- Flatline or frozen values where dynamic variance drops to exactly zero over extended operating windows.\n- Out-of-bounds readings exceeding physical sensor limits (e.g., negative pressures on absolute gauges or current exceeding breaker capacity without trip).\n- High-frequency white noise, random telemetry spikes, or dropped MQTT packet payloads.\n- Disagreement between redundant sensors or physical contradictions (e.g., motor current reading zero while discharge pressure and vibration indicate full-speed operation).\n\n## Possible Causes\n- Loose terminal wiring, loose screw connections, or oxidized wire terminations on sensor terminal blocks.\n- Sensor power supply fluctuation, low battery voltage in wireless IoT nodes, or electrical ground loops.\n- Mechanical shock or moisture ingress compromising transducer internal electronics or piezoresistive diaphragms.\n- Electromagnetic interference (EMI) or radio-frequency interference (RFI) induced by unshielded VFD motor cables.\n- Physical detachment or improper mounting: Accelerometer stud loose, thermocouple pulled out of thermowell, or clogged pressure impulse tube.\n- Sensor drift resulting from thermal aging, membrane fouling, or mechanical strain beyond transducer limits.\n\n## Sensor Indicators\n\n| Sensor Parameter | Observed Pattern | Diagnostic Significance | Correlation with Other Readings |\n| :--- | :--- | :--- | :--- |\n| **All Sensors (General)** | Flatline, instantaneous step-jump, or value stuck at full-scale rail (min or max) | Core indicator of instrumentation failure rather than machine physics | Contradicted by related physical parameters |\n| **Temperature** | Instantaneous infinite reading (open thermocouple circuit) or negative full-scale | Open or shorted RTD / thermocouple circuit | Motor casing cool to touch while sensor reports extreme thermal trip |\n| **Vibration** | Flat zero or constant saturated rail (+/- full scale g) | Disconnected piezo cable, loose mounting stud, or amplifier saturation | Zero vibration while motor current shows machine is fully loaded |\n| **Current** | Zero reading or fluctuating noise floor during known running state | CT open circuit, loose burden resistor, or disconnected ADC lead | Zero current while pump generates steady fluid pressure |\n| **Pressure** | Static flatline regardless of valve modulation or machine state | Clogged impulse tubing, frozen transducer diaphragm, or zero-shift | Pressure constant despite pump start/stop cycle |\n| **Humidity** | 0% or 100% saturation reading | Condensation bridging sensing electrode or disconnected capacitive sensor | Unchanging regardless of ambient seasonal shifts |",
+      "section_heading": null,
+      "token_estimate": 633
+    },
+    {
+      "chunk_id": "FAULT-010_chunk_002",
+      "document_id": "FAULT-010",
+      "document_type": "fault",
+      "source": "faults/sensor-anomaly.md",
+      "chunk_index": 1,
+      "title": "Sensor Anomaly",
+      "category": "instrumentation",
+      "equipment": "sensor",
+      "severity": "medium",
+      "sensors": [
+        "temperature",
+        "vibration",
+        "current",
+        "pressure",
+        "humidity"
+      ],
+      "text": "# Sensor Anomaly\n\n## Recommended Checks\n1. Validate against secondary instrumentation: Compare IoT telemetry reading with local analog dial gauges, hand-held thermal pyrometers, or clamp meters.\n2. Cross-correlate multi-sensor physics: Check if related physical indicators make sense (e.g., does motor current match running state indicated by pressure and vibration?).\n3. Inspect physical mounting: Check accelerometer mounting torque, thermowell contact paste, pressure snubber, and impulse line cleanliness.\n4. Verify wiring integrity: Inspect signal cable shielding, check for ground loops, test loop resistance, and verify 4-20 mA / 0-10 V analog signals.\n5. Check microcontroller / ADC node: Inspect edge compute node (e.g., ESP32) power rail voltage, ADC reference stability, and firmware health.\n6. Perform sensor calibration: Apply certified zero and span reference test signals (e.g., hydraulic deadweight tester, temperature dry-well calibrator).\n\n## Safety\n- False sense of security: Never ignore a sensor anomaly; a disabled or erroneous sensor can mask an actual developing machine disaster.\n- Accidental trip hazard: Bypassing or troubleshooting instrumentation on live safety interlocks can cause unexpected process trips.\n- Electrical Safety: Follow safe isolation and low-voltage electrical safety guidelines when probing sensor wires and terminal blocks inside control panels.\n\n## Related Faults\n- [FAULT-008: Low Pressure](low-pressure.md)\n- [FAULT-009: High Pressure](high-pressure.md)\n- [FAULT-003: Motor Overheating](motor-overheating.md)",
+      "section_heading": null,
+      "token_estimate": 275
+    },
+    {
+      "chunk_id": "PROC-GENERAL-DIAGNOSIS_chunk_001",
+      "document_id": "PROC-GENERAL-DIAGNOSIS",
+      "document_type": "procedure",
+      "source": "procedures/general-diagnosis.md",
+      "chunk_index": 0,
+      "title": "General Industrial IoT Fault Diagnosis Workflow",
+      "category": "procedure",
+      "equipment": "general",
+      "severity": null,
+      "sensors": [
+        "temperature",
+        "vibration",
+        "current",
+        "pressure",
+        "humidity"
+      ],
+      "text": "# General Industrial IoT Fault Diagnosis Workflow\n\n## Purpose and Scope\nThis procedure defines the standardized, multi-stage diagnostic reasoning workflow for industrial rotating machinery (electric motors, centrifugal pumps, and mechanical drives) monitored via industrial IoT telemetry. The goal is to provide a systematic methodology for moving from real-time sensor anomalies to validated root-cause diagnosis and corrective maintenance recommendations without premature conclusions.\n\n---\n\n## Diagnostic Workflow Architecture\n\n```\n   +-----------------------------------------------------------+\n   | Stage 1: Continuous Telemetry Ingestion & Anomaly Triage  |\n   | (Rule/Threshold Violation, Rate-of-Change, Signal Health)  |\n   +-----------------------------+-----------------------------+\n                                 |\n                                 v\n   +-----------------------------------------------------------+\n   | Stage 2: Signal Integrity & Sensor Anomaly Verification   |\n   | (Check for Flatlines, Implausible Values, Power/Wiring)   |\n   +-----------------------------+-----------------------------+\n                                 | Valid Physics Confirmed\n                                 v\n   +-----------------------------------------------------------+\n   | Stage 3: Multi-Sensor Cross-Correlation & Pattern Mapping |\n   | (Correlate Temp + Vib + Current + Pressure + Humidity)    |\n   +-----------------------------+-----------------------------+\n                                 |\n                                 v\n   +-----------------------------------------------------------+\n   | Stage 4: Differential Diagnosis & Candidate Ranking       |\n   | (Evaluate Hypotheses: Mechanical vs Electrical vs Fluid)  |\n   +-----------------------------+-----------------------------+\n                                 |\n                                 v\n   +-----------------------------------------------------------+\n   | Stage 5: Safe Physical Inspection & On-Site Verification  |\n   | (LOTO, Visual, Thermography, Dial Indicators, Gauges)     |\n   +-----------------------------+-----------------------------+\n                                 |\n                                 v\n   +-----------------------------------------------------------+\n   | Stage 6: Corrective Action, Verification & Baseline Reset |\n   +-----------------------------------------------------------+\n```\n\n---",
+      "section_heading": null,
+      "token_estimate": 260
+    },
+    {
+      "chunk_id": "PROC-GENERAL-DIAGNOSIS_chunk_002",
+      "document_id": "PROC-GENERAL-DIAGNOSIS",
+      "document_type": "procedure",
+      "source": "procedures/general-diagnosis.md",
+      "chunk_index": 1,
+      "title": "General Industrial IoT Fault Diagnosis Workflow",
+      "category": "procedure",
+      "equipment": "general",
+      "severity": null,
+      "sensors": [
+        "temperature",
+        "vibration",
+        "current",
+        "pressure",
+        "humidity"
+      ],
+      "text": "# General Industrial IoT Fault Diagnosis Workflow\n\n## Step-by-Step Procedure\n\n### Stage 1: Telemetry Ingestion & Anomaly Triage\n1. **Detect Out-of-Envelope Readings:** Continuously compare incoming sensor telemetry against established baseline thresholds, operating envelopes, and statistical trend boundaries.\n2. **Evaluate Rate of Change ($\\Delta / \\Delta t$):** Distinguish between instantaneous step changes (often instrumentation artifacts) and progressive exponential or linear drifts (indicative of true physical degradation).\n3. **Assess Severity Tier:**\n   - **Informational / Low:** Minor baseline drift within allowable operating tolerance.\n   - **Medium / Warning:** Approaching operational boundary; accelerated monitoring and trending required.\n   - **Critical / Danger:** Exceeded maximum safe operational threshold; high risk of catastrophic equipment damage or personnel hazard.\n\n### Stage 2: Signal Integrity & Sensor Validation\nBefore declaring a mechanical or electrical machinery breakdown, eliminate instrumentation errors:\n1. **Physical Plausibility Check:** Evaluate whether the reading violates thermodynamic or electrical laws (e.g., stator temperature jumping 50 °C within 1 second, or negative fluid pressure on a standard gauge).\n2. **Dynamic Variance Check:** Detect frozen signals where sensor values remain perfectly constant down to micro-decimals across varying operational duty cycles.\n3. **Cross-Check Complementary Sensors:**\n   - If motor current indicates running state, vibration and pressure should reflect operational dynamics.\n   - If one sensor contradicts all other physical channels, isolate the issue under [FAULT-010: Sensor Anomaly](../faults/sensor-anomaly.md).\n\n### Stage 3: Multi-Sensor Cross-Correlation Matrix\nCorrelate simultaneous telemetry parameters to classify the problem domain:\n\n| Temperature | Vibration | Current | Pressure | Primary Diagnostic Hypothesis |\n| :--- | :--- | :--- | :--- | :--- |\n| **High** | **High** | **Moderate/High** | Normal | [FAULT-001: Bearing Overheating](../faults/bearing-overheating.md) or [FAULT-002: Bearing Wear](../faults/bearing-wear.md) |\n| **High** | Normal/Mod | **High** | High/Normal | [FAULT-003: Motor Overheating](../faults/motor-overheating.md) or [FAULT-004: Motor Overcurrent](../faults/motor-overcurrent.md) |\n| Normal | **High** | Normal | Normal | [FAULT-005: Excessive Motor Vibration](../faults/motor-vibration.md) (Unbalance, Misalignment) |\n| Normal/Mod | **High (Broadband)**| Erratic/Low | **Depressed/Swinging** | [FAULT-006: Pump Cavitation](../faults/pump-cavitation.md) |\n| **Spike** | Squeal / Friction | **Very Low** | **Zero / Ambient** | [FAULT-007: Pump Dry Running](../faults/pump-dry-running.md) |\n| Normal | Normal | Low / High | **Low** | [FAULT-008: Low Pressure](../faults/low-pressure.md) (Pipe leak or wear ring clearance) |\n| **High (Casing)** | Moderate | High / Low | **High** | [FAULT-009: High Pressure](../faults/high-pressure.md) (Discharge blockage / Dead-heading) |\n\n### Stage 4: Differential Diagnosis & Candidate Hypotheses\n1. Avoid forcing a single premature diagnosis. In many industrial failure modes, identical telemetry symptoms can originate from different mechanisms:\n   - Example: A rise in motor temperature and current could indicate an electrical supply issue (under-voltage), a mechanical issue (failing bearings), or a hydraulic issue (jammed pump impeller).\n2. Maintain a ranked list of candidate faults ordered by probability and criticality.\n3. Determine what specific physical inspections or offline tests are required to confirm or rule out each hypothesis.\n\n### Stage 5: Physical Inspection & Verification\nTransfer the digital diagnosis to the physical asset safely:\n1. Refer to equipment-specific inspection guides:\n   - For electric motor symptoms, execute [Motor Inspection Procedure](motor-inspection.md).\n   - For pump and hydraulic symptoms, execute [Pump Inspection Procedure](pump-inspection.md).\n2. Utilize secondary diagnostic instruments:\n   - Hand-held infrared pyrometer / thermal camera.\n   - True-RMS clamp meter.\n   - Handheld tri-axial vibration analyzer.\n   - Calibrated analog test pressure gauges.\n\n### Stage 6: Corrective Action & Baseline Reset\n1. Perform corrective maintenance (lubrication, mechanical alignment, seal replacement, valve adjustment, or sensor rewiring).\n2. Verify system recovery under observed test run.\n3. Record root cause, corrective measures, and parts replaced in the CMMS (Computerized Maintenance Management System).\n4. Update baseline operational profiles in the IoT diagnostic system.",
+      "section_heading": null,
+      "token_estimate": 780
+    },
+    {
+      "chunk_id": "PROC-MOTOR-INSPECTION_chunk_001",
+      "document_id": "PROC-MOTOR-INSPECTION",
+      "document_type": "procedure",
+      "source": "procedures/motor-inspection.md",
+      "chunk_index": 0,
+      "title": "Electric Motor Inspection Procedure & Checklist",
+      "category": "procedure",
+      "equipment": "motor",
+      "severity": null,
+      "sensors": [
+        "temperature",
+        "vibration",
+        "current"
+      ],
+      "text": "# Electric Motor Inspection Procedure & Checklist\n\n## Purpose\nThis document provides a structured, safety-first checklist and procedure for inspecting industrial electric induction motors exhibiting telemetry anomalies (high temperature, elevated vibration, overcurrent, or acoustic distress).\n\n---\n\n## Safety Requirements & Preparation\n- **Mandatory LOTO:** Always isolate main power feed at the Motor Control Center (MCC), install personal safety padlock, and apply Lockout/Tagout (LOTO) tags before removing junction covers, touching shafts, or opening fan shrouds.\n- **Zero Energy Verification:** Verify absence of electrical voltage using a calibrated multimeter / voltage proximity detector at all incoming terminals (L1, L2, L3) phase-to-phase and phase-to-ground.\n- **PPE Requirements:** NFPA 70E compliant arc-rated face shield and clothing (when testing electrical enclosures), safety glasses, cut-resistant gloves, steel-toed boots, and thermal gloves.\n- **Stored Energy Dissipation:** Wait for rotating parts to stop completely and ensure power factor correction capacitors or VFD DC buses are completely discharged.\n\n---",
+      "section_heading": null,
+      "token_estimate": 199
+    },
+    {
+      "chunk_id": "PROC-MOTOR-INSPECTION_chunk_002",
+      "document_id": "PROC-MOTOR-INSPECTION",
+      "document_type": "procedure",
+      "source": "procedures/motor-inspection.md",
+      "chunk_index": 1,
+      "title": "Electric Motor Inspection Procedure & Checklist",
+      "category": "procedure",
+      "equipment": "motor",
+      "severity": null,
+      "sensors": [
+        "temperature",
+        "vibration",
+        "current"
+      ],
+      "text": "# Electric Motor Inspection Procedure & Checklist\n\n## Motor Inspection Checklist\n\n### 1. Operational & Environmental Overview (Online / Pre-Shutdown)\n- [ ] Record ambient temperature and relative humidity around motor location.\n- [ ] Measure operating surface temperatures using an infrared thermal imager:\n  - Stator core / frame center.\n  - Drive-End (DE) bearing housing.\n  - Non-Drive-End (NDE) bearing housing.\n  - Conduit box and cable entries.\n- [ ] Measure operating three-phase current (RMS) on L1, L2, L3 using a calibrated true-RMS clamp meter. Calculate phase current unbalance percentage:\n  $$\\text{Unbalance (\\%)} = \\frac{\\text{Max Deviation from Average}}{\\text{Average Current}} \\times 100$$\n- [ ] Check for unusual acoustic patterns (humming, grinding, clicking, or cyclical beating).\n- [ ] Inspect motor cooling airflow: confirm air intake grill at fan shroud is unobstructed and discharge airflow is strong.\n\n### 2. External Physical & Mechanical Inspection (De-energized & LOTO Applied)\n- [ ] Inspect foundation and baseplate: check for cracks, structural corrosion, or loose hold-down bolts.\n- [ ] Perform \"Soft Foot\" check: loosen hold-down bolts one by one with a dial indicator positioned at each foot; verify deflection is within tolerance (< 0.05 mm / 0.002 in).\n- [ ] Inspect coupling and alignment:\n  - Check flexible coupling element/spider for cracks, rubber dusting, or backlash.\n  - Measure angular and radial shaft misalignment using dial indicators or laser alignment tool.\n- [ ] Manually turn the motor shaft by hand (uncoupled if possible):\n  - Verify smooth rotation with no binding, catching, or axial/radial play.\n  - Listen for internal rubbing or bearing crunching.\n- [ ] Inspect cooling fan: check fan shroud for debris, ensure cooling fan blades are intact, clean, and firmly secured to the shaft.\n- [ ] Inspect cooling fins: clean accumulated grease, oil, and dust layers that restrict convective heat transfer.\n\n### 3. Lubrication & Bearing System Check\n- [ ] Inspect bearing seals (DE and NDE) for grease leakage or contamination ingress.\n- [ ] Check grease relief ports: ensure purge plugs are free and hardened grease cakes are removed.\n- [ ] Verify grease replenishment history: check grease type compatibility, date of last relubrication, and quantity added.\n- [ ] For oil-lubricated bearings: check oil level sight glass, oil clarity, and inspect for water contamination (milky emulsion) or metal flakes.\n\n### 4. Electrical & Terminal Junction Box Inspection\n- [ ] Inspect terminal box interior for moisture, dust, carbon tracking, or signs of flashover.\n- [ ] Inspect cable terminations: verify lugs are tight, no discoloration or heat scorch marks on insulation.\n- [ ] Perform insulation resistance test (Megger) at 500 V / 1000 V DC:\n  - Phase-to-Ground: Minimum acceptable resistance is typically $\\ge 5 \\text{ M}\\Omega$ (clean, dry winding benchmark $> 100 \\text{ M}\\Omega$).\n  - Phase-to-Phase (if individual phase leads are accessible).\n- [ ] Measure winding resistance balance across all three phases with a micro-ohmmeter; ensure winding resistance is balanced within 1-2%.\n- [ ] Check grounding conductor and ground bond resistance between motor frame and plant ground grid.\n\n---",
+      "section_heading": null,
+      "token_estimate": 668
+    },
+    {
+      "chunk_id": "PROC-MOTOR-INSPECTION_chunk_003",
+      "document_id": "PROC-MOTOR-INSPECTION",
+      "document_type": "procedure",
+      "source": "procedures/motor-inspection.md",
+      "chunk_index": 2,
+      "title": "Electric Motor Inspection Procedure & Checklist",
+      "category": "procedure",
+      "equipment": "motor",
+      "severity": null,
+      "sensors": [
+        "temperature",
+        "vibration",
+        "current"
+      ],
+      "text": "# Electric Motor Inspection Procedure & Checklist\n\n## Action Matrix Based on Inspection Findings\n\n| Observed Finding | Likely Root Cause | Immediate Corrective Action |\n| :--- | :--- | :--- |\n| Hot bearing housing (> 85 °C) + high vibration | Lubrication breakdown, bearing wear | Purge old grease, check alignment; replace bearing if wear frequencies persist |\n| Stator casing overheating + high balanced current | Mechanical overload or clogged cooling fins | Clean cooling fins and fan shroud; inspect driven pump for blockage or binding |\n| Overcurrent with > 5% current unbalance | Supply voltage unbalance or winding turn fault | Measure incoming supply line voltages; test winding resistance and phase balance |\n| High 1x RPM vibration on motor frame | Rotor unbalance | Clean rotor/fan; balance rotating assembly dynamically in-place |\n| High axial vibration + 2x RPM peak | Shaft misalignment | Re-align motor and driven machine using precision laser alignment kit |\n| Low insulation resistance (< 5 MΩ) | Moisture or chemical ingress into windings | Dry out windings using controlled heating; bake and revarnish if needed |",
+      "section_heading": null,
+      "token_estimate": 251
+    },
+    {
+      "chunk_id": "PROC-PUMP-INSPECTION_chunk_001",
+      "document_id": "PROC-PUMP-INSPECTION",
+      "document_type": "procedure",
+      "source": "procedures/pump-inspection.md",
+      "chunk_index": 0,
+      "title": "Centrifugal & Process Pump Inspection Procedure & Checklist",
+      "category": "procedure",
+      "equipment": "pump",
+      "severity": null,
+      "sensors": [
+        "pressure",
+        "vibration",
+        "current"
+      ],
+      "text": "# Centrifugal & Process Pump Inspection Procedure & Checklist\n\n## Purpose\nThis document provides a structured, safety-first checklist and procedure for inspecting industrial process and centrifugal pumps displaying hydraulic, mechanical, or thermal telemetry anomalies (abnormal pressure, cavitation vibration, seal overheating, or motor overcurrent).\n\n---\n\n## Safety Requirements & Preparation\n- **Mandatory LOTO (Electrical & Hydraulic):**\n  - Electrically isolate and lock out the pump drive motor at the MCC before approaching rotating parts.\n  - Hydraulically isolate the pump by closing and locking suction and discharge isolation valves.\n  - Tag out all related utility lines (seal flush, cooling water, chemical injection).\n- **Depressurization & Venting:**\n  - Slowly open pump casing drain and vent valves to verify zero hydraulic pressure before loosening any bolts, fittings, or flange connections.\n  - Collect drained process fluids in compliant chemical containment vessels.\n- **Thermal & Chemical Hazard Precaution:**\n  - Verify casing temperature has cooled to safe ambient handling limits (< 40 °C) before opening vents.\n  - Wear chemical-resistant gloves, splash apron, face shield, and safety glasses when draining process lines.\n\n---",
+      "section_heading": null,
+      "token_estimate": 231
+    },
+    {
+      "chunk_id": "PROC-PUMP-INSPECTION_chunk_002",
+      "document_id": "PROC-PUMP-INSPECTION",
+      "document_type": "procedure",
+      "source": "procedures/pump-inspection.md",
+      "chunk_index": 1,
+      "title": "Centrifugal & Process Pump Inspection Procedure & Checklist",
+      "category": "procedure",
+      "equipment": "pump",
+      "severity": null,
+      "sensors": [
+        "pressure",
+        "vibration",
+        "current"
+      ],
+      "text": "# Centrifugal & Process Pump Inspection Procedure & Checklist\n\n## Pump Inspection Checklist\n\n### 1. Operational & Hydraulic Check (Online / Pre-Shutdown)\n- [ ] Record suction pressure, discharge pressure, and differential pressure across the pump.\n- [ ] Compare measured differential head ($H = \\frac{\\Delta P}{\\rho g}$) against the pump performance curve at current flow rate.\n- [ ] Listen for characteristic cavitation acoustic noise (\"pumping gravel/rocks\") near suction flange and impeller eye.\n- [ ] Inspect pump mechanical seal gland / stuffing box:\n  - Check for liquid leakage drops per minute (standard mechanical seal should have zero visible drop leakage).\n  - Measure seal gland surface temperature using an infrared pyrometer.\n- [ ] Check seal flush / barrier fluid pressure, temperature, and circulating flow.\n- [ ] Inspect suction and discharge piping for visible pipe vibration, water hammer shocks, or strained hangers.\n\n### 2. Suction & Inlet Line Inspection (De-energized & Isolated)\n- [ ] Check liquid supply source: verify actual vessel/tank liquid level via sight gauge vs. level transmitter.\n- [ ] Inspect suction line strainer: remove basket, inspect for clogging, debris, rags, or scale; clean thoroughly.\n- [ ] Verify that suction line isolation valve is 100% fully open and valve disc is not detached from stem.\n- [ ] Inspect suction piping geometry: ensure suction pipe has at least 5 to 10 pipe diameters of straight run prior to the suction nozzle, with no high-point vapor traps.\n- [ ] Check for air ingress points: inspect suction flange gaskets, valve packing, and instrumentation tappings for vacuum leaks.\n\n### 3. Mechanical & Rotating Assembly Inspection (LOTO Applied)\n- [ ] Rotate pump shaft manually by hand:\n  - Shaft must turn freely and smoothly without tight spots, binding, or rubbing.\n  - Ensure zero axial binding against volute cutwater or wear rings.\n- [ ] Inspect bearing housing and lubrication:\n  - Check constant-level oiler level and cleanliness; check for water emulsion or metal sediment.\n  - Check bearing temperatures and inspect oil seals/isolators for oil leakage.\n- [ ] Check shaft radial and axial runout using a dial indicator mounted on the pump casing.\n- [ ] Inspect pump-to-motor coupling:\n  - Check flexible element wear, bolt torques, and check coupling alignment (angular and offset).\n\n### 4. Internal Casing & Impeller Inspection (Major Teardown / Maintenance)\n- [ ] Inspect impeller vanes:\n  - Check suction vane leading edges for classic cavitation pitting, honeycombing, or spongy metal loss.\n  - Check for foreign object damage, bent vanes, or corrosion erosion.\n- [ ] Measure wear ring clearances:\n  - Measure diametrical clearance between impeller wear ring and casing wear ring using feeler gauges.\n  - Replace wear rings if clearance exceeds 2x original manufacturer design specification.\n- [ ] Inspect mechanical seal components:\n  - Inspect seal faces (silicon carbide, tungsten carbide, carbon) for thermal cracking (heat checking), blistering, or deep scoring.\n  - Inspect secondary elastomer O-rings for thermal hardening, embrittlement, or chemical swelling.\n- [ ] Inspect casing volute and cutwater: check for abrasive erosion, cracks, or erosion groves.\n\n---",
+      "section_heading": null,
+      "token_estimate": 672
+    },
+    {
+      "chunk_id": "PROC-PUMP-INSPECTION_chunk_003",
+      "document_id": "PROC-PUMP-INSPECTION",
+      "document_type": "procedure",
+      "source": "procedures/pump-inspection.md",
+      "chunk_index": 2,
+      "title": "Centrifugal & Process Pump Inspection Procedure & Checklist",
+      "category": "procedure",
+      "equipment": "pump",
+      "severity": null,
+      "sensors": [
+        "pressure",
+        "vibration",
+        "current"
+      ],
+      "text": "# Centrifugal & Process Pump Inspection Procedure & Checklist\n\n## Action Matrix Based on Inspection Findings\n\n| Observed Finding | Likely Root Cause | Immediate Corrective Action |\n| :--- | :--- | :--- |\n| Popping noise + erratic pressure + high vibration | Pump Cavitation (insufficient NPSHa) | Clean suction strainer, raise suction level, open throttled suction valves, lower fluid temp |\n| Zero pressure + very low motor current | Pump Dry Running or lost prime | Immediately shut down pump, inspect supply reservoir, vent casing, and re-prime completely |\n| High discharge pressure + motor straining | Downstream blockage or closed valve | Re-align discharge valve lineup, inspect downstream filters/strainers for clogs |\n| Low discharge pressure + normal current | Excessive wear ring clearance or worn impeller | Measure wear ring clearance; replace worn rings and impeller as necessary |\n| Seal gland overheating (> 80 °C) | Dry running seal or plugged flush line | Clean seal flush tubing and orifice; ensure adequate barrier fluid cooling |\n| Heavy leakage from mechanical seal gland | Blistered, cracked, or worn seal faces | Replace mechanical seal cartridge; inspect shaft sleeve for fretting |",
+      "section_heading": null,
+      "token_estimate": 263
+    },
+    {
+      "chunk_id": "SENSOR-CURRENT_chunk_001",
+      "document_id": "SENSOR-CURRENT",
+      "document_type": "sensor",
+      "source": "sensors/current.md",
+      "chunk_index": 0,
+      "title": "Current Sensor in Industrial IoT Fault Diagnosis",
+      "category": "instrumentation",
+      "equipment": "sensor",
+      "severity": null,
+      "sensors": [
+        "current"
+      ],
+      "text": "# Current Sensor in Industrial IoT Fault Diagnosis\n\n## 1. What the Sensor Measures\nAn industrial IoT current sensor measures the electrical current (amperage) flowing through one or more power supply conductors feeding an electric motor or electrical asset. Typical measurement hardware includes non-invasive Current Transformers (CTs), Hall-effect transducers, Rogowski coils, or shunt resistors coupled to high-speed analog-to-digital converters (ADCs). The sensor captures root-mean-square (RMS) current, instantaneous alternating current waveforms, and harmonic frequency components across the three-phase electrical supply.\n\n## 2. What a Normal Reading Generally Represents\nA normal current reading indicates that the electric motor is operating comfortably within its rated electrical design parameters and delivering mechanical shaft torque commensurate with the driven load. The current level tracks the mechanical load on the motor shaft, operating below or at the motor nameplate Full Load Amperage (FLA) multiplied by its permissible Service Factor (SF).\n\n> **Important Operational Note:**\n> Actual limits depend on the equipment specification, sensor location, operating conditions, and manufacturer recommendations.\n\nFor example, an electric motor rated at 10 A FLA operating a centrifugal pump will normally draw between 6.0 A and 9.5 A under steady-state fluid delivery. Drawing less than 3 A often indicates an uncoupled or dry-running pump, whereas drawing continuously above 10.5 A indicates an overload condition.\n\n## 3. What Abnormal Readings Can Indicate\nDeviations in electrical current indicate either electrical power supply anomalies or changes in driven mechanical and hydraulic load:\n- **Driven Load Overload:** Current exceeding rated FLA caused by high fluid viscosity, jammed impellers, mechanical binding, or excessive flow rate.\n- **Under-Voltage or Phase Unbalance:** Operating on degraded line voltage or unbalanced three-phase supply causes the motor to draw higher current to produce rated shaft torque.\n- **Low-Load / Unloaded State:** Abrupt drop in current to near no-load baseline, indicating pump dry running, broken coupling, sheared key, or snapped drive belt.\n- **Electrical Rotor/Stator Faults:** Low-frequency amplitude modulation (sidebands) around supply frequency caused by broken rotor bars, air-gap eccentricity, or turn-to-turn insulation degradation (Motor Current Signature Analysis - MCSA).\n- **Instrumentation Disconnection:** A reading of zero current while the machine is running indicates an open CT circuit, defective burden resistor, or disconnected telemetry wiring.\n\n## 4. Which Faults the Sensor Can Help Identify\nCurrent telemetry provides vital insight into motor electromechanical health and driven load coupling:\n- **[FAULT-004: Motor Overcurrent](../faults/motor-overcurrent.md):** Sustained electrical current exceeding nameplate FLA limits.\n- **[FAULT-003: Motor Overheating](../faults/motor-overheating.md):** High current directly drives $I^2R$ copper losses that lead to motor thermal overheating.\n- **[FAULT-007: Pump Dry Running](../faults/pump-dry-running.md):** Sudden drop in current toward no-load amperage confirms loss of hydraulic load.\n- **[FAULT-006: Pump Cavitation](../faults/pump-cavitation.md):** Rapid, erratic current fluctuations caused by fluctuating fluid density across impeller vanes.\n- **[FAULT-001: Bearing Overheating](../faults/bearing-overheating.md) & [FAULT-002: Bearing Wear](../faults/bearing-wear.md):** Moderate current increase caused by excessive friction and mechanical drag.\n- **[FAULT-010: Sensor Anomaly](../faults/sensor-anomaly.md):** Contradictory current readings (such as zero current when the pump is producing hydraulic pressure).",
+      "section_heading": null,
+      "token_estimate": 639
+    },
+    {
+      "chunk_id": "SENSOR-CURRENT_chunk_002",
+      "document_id": "SENSOR-CURRENT",
+      "document_type": "sensor",
+      "source": "sensors/current.md",
+      "chunk_index": 1,
+      "title": "Current Sensor in Industrial IoT Fault Diagnosis",
+      "category": "instrumentation",
+      "equipment": "sensor",
+      "severity": null,
+      "sensors": [
+        "current"
+      ],
+      "text": "# Current Sensor in Industrial IoT Fault Diagnosis\n\n## 5. Limitations of Using That Sensor Alone\nCurrent monitoring alone cannot provide comprehensive fault diagnosis without integration with mechanical and hydraulic telemetry:\n- **Inability to Pinpoint Mechanical Root Causes:** A motor overcurrent alert clearly indicates that the motor is working harder than designed, but current alone cannot differentiate whether the cause is a downstream pipe blockage, bearing seizure, impeller fouling, low line voltage, or severe shaft misalignment.\n- **Blindness to Localized Mechanical Faults:** Localized bearing spalls, lubrication dry-out, or minor mechanical unbalance produce negligible changes in overall RMS current until catastrophic failure is imminent.\n- **Transient Fluctuations:** Inrush current during motor startup (often 5 to 8 times FLA) and sudden process load surges cause brief, normal current spikes that can trigger false alarms if thresholding lacks duration filtering.\n- **Requires Systemic Correlation:** To confirm whether a current change is electrical, mechanical, or hydraulic, current data must be correlated with temperature, vibration, and discharge pressure.",
+      "section_heading": null,
+      "token_estimate": 216
+    },
+    {
+      "chunk_id": "SENSOR-HUMIDITY_chunk_001",
+      "document_id": "SENSOR-HUMIDITY",
+      "document_type": "sensor",
+      "source": "sensors/humidity.md",
+      "chunk_index": 0,
+      "title": "Humidity Sensor in Industrial IoT Fault Diagnosis",
+      "category": "instrumentation",
+      "equipment": "sensor",
+      "severity": null,
+      "sensors": [
+        "humidity"
+      ],
+      "text": "# Humidity Sensor in Industrial IoT Fault Diagnosis\n\n## 1. What the Sensor Measures\nAn industrial IoT humidity sensor measures the moisture content or water vapor concentration present in the ambient atmosphere, electrical enclosures, or motor terminal junction boxes. Measurement technologies typically comprise capacitive polymer relative humidity (RH) sensors, resistive hygrometers, or thermal conductivity sensors. The sensor outputs relative humidity as a percentage (% RH, representing the ratio of partial vapor pressure to saturation vapor pressure at the current temperature) alongside ambient temperature telemetry.\n\n## 2. What a Normal Reading Generally Represents\nA normal relative humidity reading indicates that the surrounding air or enclosure interior remains within the designed dry environmental operating envelope (typically 30% to 70% RH in standard industrial plant environments). A stable, normal humidity reading confirms that environmental seals, cable glands, enclosure heaters, and ventilation breathers are intact, preventing moisture condensation on sensitive electrical insulation, stator windings, and control electronics.\n\n> **Important Operational Note:**\n> Actual limits depend on the equipment specification, sensor location, operating conditions, and manufacturer recommendations.\n\nFor example, inside a sealed motor terminal junction box or control cabinet equipped with an anti-condensation space heater, relative humidity should ideally stay below 60% to avoid moisture condensation during cold plant shutdowns.\n\n## 3. What Abnormal Readings Can Indicate\nDeviations and extreme humidity readings reveal environmental contamination, enclosure breach, or process fluid leaks:\n- **Excessively High Humidity (> 80-90% RH):** High risk of condensation dew-point crossing, leading to moisture deposition on motor windings, tracking along terminal blocks, and rust formation on bearing raceways.\n- **Localized Sudden Spikes:** Direct indicator of external fluid spraying, leaking pump mechanical seals, blown flange gaskets, or steam trap failures discharging vapor into the equipment enclosure.\n- **Low Humidity (< 20% RH):** Elevated risk of electrostatic discharge (ESD) in electronic control enclosures and drying/cracking of elastomeric shaft seals.\n- **Sensor Saturation / Flatline (100% or 0%):** Water droplet accumulation directly on capacitive polymer sensing elements, short-circuiting sensor electrodes, or sensor disconnection.\n\n## 4. Which Faults the Sensor Can Help Identify\nWhile humidity is largely an environmental or secondary diagnostic variable, it provides key corroborating evidence in critical scenarios:\n- **[FAULT-010: Sensor Anomaly](../faults/sensor-anomaly.md):** 0% or 100% flatline readings caused by condensation bridges or broken telemetry leads.\n- **[FAULT-007: Pump Dry Running](../faults/pump-dry-running.md):** Rapid humidity rise around seal glands when scorched seal faces vaporize residual barrier fluid or process liquid.\n- **[FAULT-008: Low Pressure](../faults/low-pressure.md):** Elevated ambient humidity in pump skids corroborating active pipeline rupture or flange spray.\n- **[FAULT-003: Motor Overheating](../faults/motor-overheating.md):** Prolonged high humidity accelerates dielectric breakdown of stator insulation, precipitating winding thermal failure.\n- **[FAULT-002: Bearing Wear](../faults/bearing-wear.md):** High humidity drives water contamination into grease reservoirs, emulsifying lubricants and initiating corrosive bearing raceway pitting.\n\n## 5. Limitations of Using That Sensor Alone\nHumidity monitoring is strictly a contextual and secondary diagnostic tool with marked limitations:\n- **Indirect Indicator of Mechanical Condition:** Humidity sensors cannot detect rotating machinery unbalance, shaft misalignment, bearing spalls, or electrical overloading.\n- **Slow Environmental Diffusion:** Ambient atmospheric humidity changes slowly unless a high-pressure pipe directly ruptures against the sensor enclosure.\n- **Contamination Susceptibility:** Airborne oil mist, dust, chemical vapors, and solvent fumes can contaminate or foul polymer hygrometer membranes, causing significant calibration drift.\n- **Must be Synthesized with Primary Telemetry:** Humidity data is diagnostically valuable only when correlated with machine-specific telemetry including temperature, current, vibration, and hydraulic pressure.",
+      "section_heading": null,
+      "token_estimate": 739
+    },
+    {
+      "chunk_id": "SENSOR-PRESSURE_chunk_001",
+      "document_id": "SENSOR-PRESSURE",
+      "document_type": "sensor",
+      "source": "sensors/pressure.md",
+      "chunk_index": 0,
+      "title": "Pressure Sensor in Industrial IoT Fault Diagnosis",
+      "category": "instrumentation",
+      "equipment": "sensor",
+      "severity": null,
+      "sensors": [
+        "pressure"
+      ],
+      "text": "# Pressure Sensor in Industrial IoT Fault Diagnosis\n\n## 1. What the Sensor Measures\nAn industrial IoT pressure sensor measures static or dynamic fluid pressure exerted by liquids or gases within pipelines, pump suction lines, discharge manifolds, or vessel chambers. Common industrial sensing technologies include piezoresistive strain gauges, ceramic capacitive diaphragms, and piezoelectric pressure transducers. The sensor measures pressure relative to atmospheric pressure (gauge pressure, in bar, PSI, or kPa), absolute zero (absolute pressure), or the difference between two measurement ports (differential pressure, $\\Delta P$). The transducer produces an analog signal (e.g., 4–20 mA, 0–10 V) or digital I2C/SPI telemetry transmitted across the IoT edge network.\n\n## 2. What a Normal Reading Generally Represents\nA normal pressure reading indicates stable hydraulic or pneumatic equilibrium conforming to the system's design operating point on the pump performance curve (Head vs. Capacity). Normal discharge pressure confirms that the pump is adequately primed, operating at correct speed, overcoming system pipe friction, and delivering the designated process flow rate without hydraulic choking or starvation.\n\n> **Important Operational Note:**\n> Actual limits depend on the equipment specification, sensor location, operating conditions, and manufacturer recommendations.\n\nFor example, a municipal water booster pump designed for a 3.0 bar network operating normally between 2.8 bar and 3.4 bar demonstrates steady delivery. Dropping below 1.5 bar signals line rupture or starvation, whereas exceeding 4.5 bar signals line blockage or closed isolation valves.\n\n## 3. What Abnormal Readings Can Indicate\nAbnormal pressure readings reveal severe hydraulic disruptions, mechanical degradation, or pipeline integrity breaches:\n- **Low Pressure / Pressure Loss:** Can indicate pipe ruptures, open drain valves, internal fluid recirculation, severe impeller wear, suction strainer blockage, or pump dry running.\n- **High Pressure / Hydraulic Overpressure:** Indicates downstream valve closure, line blockages, clogged filters/strainers, or dead-head pump operation.\n- **High-Frequency Pressure Fluctuations:** Characteristic of pump cavitation (vapor cavity collapse), air entrainment, or severe fluid pulsation from reciprocating components.\n- **Static Flatline Reading:** Clogged impulse line, sediment-packed sensing diaphragm, or frozen transmitter electronics unresponsive to system state changes.\n\n## 4. Which Faults the Sensor Can Help Identify\nPressure telemetry is the primary diagnostic indicator for hydraulic health and process delivery:\n- **[FAULT-008: Low Pressure](../faults/low-pressure.md):** Sustained drop in system delivery pressure below minimum threshold.\n- **[FAULT-009: High Pressure](../faults/high-pressure.md):** Dangerous hydraulic overpressure threatening piping and equipment integrity.\n- **[FAULT-006: Pump Cavitation](../faults/pump-cavitation.md):** Erratically swinging discharge pressure coupled with depleted suction head.\n- **[FAULT-007: Pump Dry Running](../faults/pump-dry-running.md):** Immediate drop to zero or ambient pressure coinciding with motor no-load current.\n- **[FAULT-004: Motor Overcurrent](../faults/motor-overcurrent.md):** Correlates whether high motor current is driven by high hydraulic discharge head.\n- **[FAULT-010: Sensor Anomaly](../faults/sensor-anomaly.md):** Constant pressure reading despite motor stop/start cycles.\n\n## 5. Limitations of Using That Sensor Alone\nWhile pressure is essential for hydraulic assessment, using pressure sensors in isolation has distinct limitations:\n- **Upstream/Downstream Locational Dependence:** A single pressure sensor reflects conditions only at its specific tapping point. A high discharge pressure sensor cannot distinguish between a closed manual valve 2 meters downstream versus a blocked filter 50 meters away without differential pressure taps.\n- **Susceptibility to Impulse Line Plugging:** Industrial process fluids carrying slurry, scale, crystallization, or particulate matter easily clog small-bore impulse tubing and snubbers, causing the sensor to display a frozen or sluggish pressure reading.\n- **Blindness to Rotating Mechanical Wear:** A pump can maintain normal discharge pressure while its bearings are actively failing, vibrating violently, or overheating, right up until mechanical seizure occurs.\n- **Need for Cross-System Correlation:** Diagnosing hydraulic vs. mechanical vs. electrical root causes requires correlating pressure with motor current, bearing vibration, and temperature.",
+      "section_heading": null,
+      "token_estimate": 784
+    },
+    {
+      "chunk_id": "SENSOR-TEMPERATURE_chunk_001",
+      "document_id": "SENSOR-TEMPERATURE",
+      "document_type": "sensor",
+      "source": "sensors/temperature.md",
+      "chunk_index": 0,
+      "title": "Temperature Sensor in Industrial IoT Fault Diagnosis",
+      "category": "instrumentation",
+      "equipment": "sensor",
+      "severity": null,
+      "sensors": [
+        "temperature"
+      ],
+      "text": "# Temperature Sensor in Industrial IoT Fault Diagnosis\n\n## 1. What the Sensor Measures\nAn industrial IoT temperature sensor measures the thermal state of machinery components, process fluids, or ambient operating environments. In electro-mechanical equipment—such as electric induction motors, centrifugal pumps, and gearboxes—temperature sensors are typically positioned at bearing housings, stator winding end-turns, pump casing volutes, mechanical seal glands, and cooling air discharge paths. Common transducer technologies include Resistance Temperature Detectors (RTDs, e.g., PT100/PT1000), thermocouples (Type K, J), thermistors, and digital infrared surface temperature sensors. The sensor converts thermal energy into a calibrated electrical signal (such as resistance, millivoltage, or an ADC digital count) transmitted via IoT telemetry.\n\n## 2. What a Normal Reading Generally Represents\nA normal temperature reading indicates that the equipment has reached thermal equilibrium where internal heat generation (caused by normal electrical $I^2R$ copper losses, iron core magnetic hysteresis, and nominal mechanical friction) is effectively balanced by cooling mechanisms (forced air fans, cooling fins, or circulating process fluids). Under steady-state normal operating conditions, temperatures remain stable within rated insulation limits and manufacturer-specified bearing lubricant thermal envelopes.\n\n> **Important Operational Note:**\n> Actual limits depend on the equipment specification, sensor location, operating conditions, and manufacturer recommendations.\n\nFor example, in a standard continuous-duty industrial induction motor with Class F insulation, a casing temperature between 40 °C and 70 °C might represent normal operation depending on ambient temperature, whereas exceeding 90 °C to 100 °C indicates thermal distress.\n\n## 3. What Abnormal Readings Can Indicate\nAbnormal temperature readings can manifest as sustained elevations, sudden steep upward slopes, or atypical localized thermal gradients:\n- **Excessive Mechanical Friction:** Severe heating at bearing caps or shaft seals pointing to inadequate, degraded, or excessive lubrication, or misalignment.\n- **Electrical Overload:** Widespread stator frame heating resulting from continuous overcurrent, phase unbalance, or under-voltage operation.\n- **Cooling Impairment:** Gradual temperature rise caused by blocked cooling fan cowls, fouled motor fins, or degraded ambient heat exchange.\n- **Hydraulic Friction / Dead-heading:** Steep temperature surge inside a pump casing caused by churning liquid when the discharge line is choked or closed.\n- **Implausible Values (Extremes/Steps):** Broken thermocouple junctions, disconnected RTDs, or open circuits that register maximum scale, negative values, or erratic steps.\n\n## 4. Which Faults the Sensor Can Help Identify\nTemperature telemetry serves as a primary or strong confirmatory indicator for several industrial faults:\n- **[FAULT-001: Bearing Overheating](../faults/bearing-overheating.md):** Rapid or continuous temperature rise localized at motor or pump bearing housings.\n- **[FAULT-002: Bearing Wear](../faults/bearing-wear.md):** Secondary thermal rise accompanying elevated vibration as surface micro-pitting and spalling degrade raceways.\n- **[FAULT-003: Motor Overheating](../faults/motor-overheating.md):** General thermal escalation across motor frame and stator windings.\n- **[FAULT-007: Pump Dry Running](../faults/pump-dry-running.md):** Extreme thermal spike at mechanical seal face and pump stuffing box due to lack of liquid lubrication.\n- **[FAULT-009: High Pressure](../faults/high-pressure.md):** High casing temperature caused by dead-headed centrifugal pump recirculating fluid.\n- **[FAULT-010: Sensor Anomaly](../faults/sensor-anomaly.md):** Disconnected or malfunctioning sensor reporting out-of-range temperatures.",
+      "section_heading": null,
+      "token_estimate": 639
+    },
+    {
+      "chunk_id": "SENSOR-TEMPERATURE_chunk_002",
+      "document_id": "SENSOR-TEMPERATURE",
+      "document_type": "sensor",
+      "source": "sensors/temperature.md",
+      "chunk_index": 1,
+      "title": "Temperature Sensor in Industrial IoT Fault Diagnosis",
+      "category": "instrumentation",
+      "equipment": "sensor",
+      "severity": null,
+      "sensors": [
+        "temperature"
+      ],
+      "text": "# Temperature Sensor in Industrial IoT Fault Diagnosis\n\n## 5. Limitations of Using That Sensor Alone\nWhile temperature monitoring is vital for machinery health, relying solely on temperature telemetry has significant engineering limitations:\n- **Thermal Lag and Inertia:** Machinery components possess substantial thermal mass. Mechanical faults (such as severe bearing cage failure, misalignment, or cavitation) can cause severe structural damage long before sufficient heat propagates to an external sensor probe.\n- **Lack of Kinematic Specificity:** An elevated temperature indicates thermal dissipation, but cannot independently differentiate between insufficient grease, excessive grease, shaft misalignment, electrical winding overload, or cooling duct blockage.\n- **Sensitivity to Ambient Conditions:** Temperature measurements fluctuate with seasonal variations, day/night thermal cycles, and ventilation drafts, which can mask minor internal fault progression or generate false alarms unless ambient compensation is applied.\n- **Requirement for Multi-Sensor Fusion:** Accurate root-cause diagnosis requires cross-correlating temperature with vibration (mechanical dynamics), current (electrical and shaft load), and pressure (hydraulic conditions).",
+      "section_heading": null,
+      "token_estimate": 207
+    },
+    {
+      "chunk_id": "SENSOR-VIBRATION_chunk_001",
+      "document_id": "SENSOR-VIBRATION",
+      "document_type": "sensor",
+      "source": "sensors/vibration.md",
+      "chunk_index": 0,
+      "title": "Vibration Sensor in Industrial IoT Fault Diagnosis",
+      "category": "instrumentation",
+      "equipment": "sensor",
+      "severity": null,
+      "sensors": [
+        "vibration"
+      ],
+      "text": "# Vibration Sensor in Industrial IoT Fault Diagnosis\n\n## 1. What the Sensor Measures\nAn industrial IoT vibration sensor measures dynamic oscillatory motion, acceleration, or velocity of machinery frames, bearing housings, or structural supports. Transducers typically employ piezoelectric accelerometers, piezoresistive microelectromechanical systems (MEMS), or eddy-current proximity probes. The sensor captures cyclical mechanical motion along one or more orthogonal axes (horizontal, vertical, axial) and converts mechanical acceleration (measured in g or m/s²), velocity (in mm/s or in/s RMS), or peak-to-peak displacement (in micrometers or mils) into analog or digital telemetry.\n\n## 2. What a Normal Reading Generally Represents\nA normal vibration reading indicates smooth, balanced rotational dynamics where dynamic forces generated by rotating masses, shaft couplings, and fluid impellers are well within designed mechanical tolerances. Under healthy conditions, the equipment exhibits baseline vibration levels conforming to established standards such as ISO 10816 / ISO 20816 Class I, II, or III vibration severity limits.\n\n> **Important Operational Note:**\n> Actual limits depend on the equipment specification, sensor location, operating conditions, and manufacturer recommendations.\n\nFor instance, a rigidly mounted small-to-medium motor (up to 15 kW) operating in good condition typically exhibits an overall vibration velocity below 1.8 to 2.8 mm/s RMS, whereas values exceeding 4.5 mm/s RMS require alert notification, and levels above 7.1 to 11 mm/s RMS demand immediate shutdown.\n\n## 3. What Abnormal Readings Can Indicate\nElevated or irregular vibration readings indicate abnormal kinetic forces, mechanical degradation, or hydraulic turbulence:\n- **Mass Unbalance:** High sinusoidal 1x rotational speed (1x RPM) vibration caused by uneven weight distribution on fans, rotors, or impellers.\n- **Shaft Misalignment:** Predominantly 1x and 2x RPM vibration, frequently accompanied by strong axial directional vibration across couplings.\n- **Mechanical Looseness:** Harmonic series (1x, 2x, 3x, 4x, etc.) with sub-synchronous components caused by loose hold-down bolts, worn housings, or soft foot.\n- **Bearing Raceway Degradation:** High-frequency impact spikes and non-synchronous bearing fault frequencies (BPFO, BPFI, BSF, FTF).\n- **Hydraulic Turbulence and Cavitation:** Random, high-frequency broadband noise floor elevation caused by collapsing vapor bubbles or fluid recirculation.\n- **Sensor Detachment or Saturated Rail:** Sensor loose from stud mount, broken cable, or internal clipping resulting in false high/low readings.\n\n## 4. Which Faults the Sensor Can Help Identify\nVibration is one of the most versatile and sensitive indicators of mechanical and hydraulic degradation:\n- **[FAULT-005: Excessive Motor Vibration](../faults/motor-vibration.md):** Overall RMS velocity elevation across fundamental and harmonic rotational frequencies.\n- **[FAULT-002: Bearing Wear](../faults/bearing-wear.md):** High-frequency impulsive acceleration peaks, elevated crest factor, and bearing fault frequency harmonics.\n- **[FAULT-001: Bearing Overheating](../faults/bearing-overheating.md):** High friction carpet noise and elevated overall vibration accompanying thermal rise.\n- **[FAULT-006: Pump Cavitation](../faults/pump-cavitation.md):** High-energy broadband vibration spikes (> 1 kHz to ultrasonic range) caused by imploding vapor cavities.\n- **[FAULT-004: Motor Overcurrent](../faults/motor-overcurrent.md):** Corroborates whether overcurrent stems from mechanical binding/misalignment or pure electrical issues.\n- **[FAULT-010: Sensor Anomaly](../faults/sensor-anomaly.md):** Flatline zero reading or saturated rail when the accelerometer or wiring fails.",
+      "section_heading": null,
+      "token_estimate": 634
+    },
+    {
+      "chunk_id": "SENSOR-VIBRATION_chunk_002",
+      "document_id": "SENSOR-VIBRATION",
+      "document_type": "sensor",
+      "source": "sensors/vibration.md",
+      "chunk_index": 1,
+      "title": "Vibration Sensor in Industrial IoT Fault Diagnosis",
+      "category": "instrumentation",
+      "equipment": "sensor",
+      "severity": null,
+      "sensors": [
+        "vibration"
+      ],
+      "text": "# Vibration Sensor in Industrial IoT Fault Diagnosis\n\n## 5. Limitations of Using That Sensor Alone\nDespite its diagnostic power, vibration monitoring cannot function as a standalone diagnostic tool without corroborating sensor data:\n- **Root Cause Ambiguity:** An elevated overall vibration level indicates mechanical distress but cannot confirm whether the underlying cause is an electrical fault (broken rotor bar), mechanical wear (bearing raceway spall), or hydraulic instability (pump cavitation) without detailed spectral analysis and multi-sensor correlation.\n- **Mounting Dependency:** Sensor placement, mounting method (magnetic base, stud mount, adhesive, or hand-held probe), and surface cleanliness heavily influence high-frequency response and measurement repeatability.\n- **Insensitivity to Pure Thermal or Electrical Degradation:** Pure electrical winding degradation, insulation drying, minor phase unbalance, or steady-state fluid blockage will not generate notable vibration signatures until physical damage has already occurred.\n- **Cross-Coupled Background Noise:** Vibration from adjacent equipment, piping resonance, or plant structural vibrations can transmit through baseplates, causing false alarms on a healthy machine.",
+      "section_heading": null,
+      "token_estimate": 211
+    }
+  ]
+}

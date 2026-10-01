@@ -1,0 +1,393 @@
+{
+  "sections": {
+    "Regression": [
+      {
+        "name": "Spring Boot Tests",
+        "passed": true,
+        "details": "70/70 passed (verified in baseline run)"
+      },
+      {
+        "name": "React Frontend Tests",
+        "passed": true,
+        "details": "42/42 passed (verified in baseline run)"
+      },
+      {
+        "name": "Python AI Tests",
+        "passed": true,
+        "details": "217/217 passed (verified in baseline run)"
+      }
+    ],
+    "Backend": [
+      {
+        "name": "User Registration",
+        "passed": true,
+        "details": "Status: 201"
+      },
+      {
+        "name": "Duplicate Username Conflict (409)",
+        "passed": true,
+        "details": "Status: 409"
+      },
+      {
+        "name": "User Login & JWT Issuance",
+        "passed": true,
+        "details": "Status: 200, Role: ADMIN"
+      },
+      {
+        "name": "Invalid Credentials (401)",
+        "passed": true,
+        "details": "Status: 401"
+      },
+      {
+        "name": "JWT Authenticated /auth/me",
+        "passed": true,
+        "details": "User: qa_user_1790805348"
+      },
+      {
+        "name": "Tampered JWT Rejection (401)",
+        "passed": true,
+        "details": "Status: 401"
+      },
+      {
+        "name": "Missing JWT Rejection on /alerts (401)",
+        "passed": true,
+        "details": "Status: 401"
+      },
+      {
+        "name": "Missing JWT Rejection on /diagnosis (401)",
+        "passed": true,
+        "details": "Status: 401"
+      },
+      {
+        "name": "Authenticated /api/v1/alerts (200)",
+        "passed": true,
+        "details": "Total Alerts: 0"
+      },
+      {
+        "name": "Missing Diagnosis ID (404)",
+        "passed": true,
+        "details": "Status: 404"
+      },
+      {
+        "name": "Missing Alert ID (404)",
+        "passed": true,
+        "details": "Status: 404"
+      },
+      {
+        "name": "Acknowledge Missing Alert (404)",
+        "passed": true,
+        "details": "Status: 404"
+      },
+      {
+        "name": "CORS Preflight Headers",
+        "passed": true,
+        "details": "Allow-Origin: http://localhost:5173"
+      },
+      {
+        "name": "Malformed Request Exception (400)",
+        "passed": true,
+        "details": "Status: 400"
+      }
+    ],
+    "Python AI": [
+      {
+        "name": "AI Bridge Health Endpoint",
+        "passed": true,
+        "details": "Status: UP"
+      },
+      {
+        "name": "End-to-End AI Inference via Bridge",
+        "passed": true,
+        "details": "Latency: 43.51s, Fault: None"
+      },
+      {
+        "name": "Invalid Telemetry Rejection",
+        "passed": true,
+        "details": "Status: 400"
+      },
+      {
+        "name": "Empty Body Rejection",
+        "passed": true,
+        "details": "Status: 400"
+      }
+    ],
+    "MQTT": [
+      {
+        "name": "Valid Telemetry Ingestion to PostgreSQL",
+        "passed": true,
+        "details": "Count 979 -> 980"
+      },
+      {
+        "name": "Malformed JSON Resilience",
+        "passed": true,
+        "details": "Spring Boot remained operational"
+      },
+      {
+        "name": "Partial Fields Ingestion",
+        "passed": true,
+        "details": "Count -> 981"
+      },
+      {
+        "name": "Rapid Burst Ingestion (5 msgs)",
+        "passed": true,
+        "details": "Successfully persisted in 1.59s"
+      }
+    ],
+    "PostgreSQL": [
+      {
+        "name": "Table Existence & Query: sensor_readings",
+        "passed": true,
+        "details": "986 rows"
+      },
+      {
+        "name": "Table Existence & Query: diagnoses",
+        "passed": true,
+        "details": "0 rows"
+      },
+      {
+        "name": "Table Existence & Query: diagnosis_evidence",
+        "passed": true,
+        "details": "0 rows"
+      },
+      {
+        "name": "Table Existence & Query: diagnosis_knowledge_sources",
+        "passed": true,
+        "details": "0 rows"
+      },
+      {
+        "name": "Table Existence & Query: diagnosis_alternative_faults",
+        "passed": true,
+        "details": "0 rows"
+      },
+      {
+        "name": "Table Existence & Query: diagnosis_possible_causes",
+        "passed": true,
+        "details": "0 rows"
+      },
+      {
+        "name": "Table Existence & Query: diagnosis_recommended_checks",
+        "passed": true,
+        "details": "0 rows"
+      },
+      {
+        "name": "Table Existence & Query: diagnosis_additional_info",
+        "passed": true,
+        "details": "0 rows"
+      },
+      {
+        "name": "Table Existence & Query: users",
+        "passed": true,
+        "details": "4 rows"
+      },
+      {
+        "name": "Table Existence & Query: alerts",
+        "passed": true,
+        "details": "0 rows"
+      },
+      {
+        "name": "Users Table Constraints",
+        "passed": true,
+        "details": "Constraints verified: idx_user_email, idx_user_username, users_created_at_not_null, users_email_not_null, users_id_not_null, users_password_hash_not_null, users_pkey, users_role_check, users_role_not_null, users_username_not_null"
+      },
+      {
+        "name": "Diagnosis Foreign Key Constraints",
+        "passed": true,
+        "details": "Foreign keys active: 2"
+      },
+      {
+        "name": "Alerts Table Indexes",
+        "passed": true,
+        "details": "Indexes: alerts_pkey, idx_alerts_device_id, idx_alerts_severity, idx_alerts_acknowledged, idx_alerts_created_at"
+      }
+    ],
+    "React": [
+      {
+        "name": "Root / Dashboard Route",
+        "passed": true,
+        "details": "Status: 200"
+      },
+      {
+        "name": "Login Page Route",
+        "passed": true,
+        "details": "Status: 200"
+      },
+      {
+        "name": "Registration Page Route",
+        "passed": true,
+        "details": "Status: 200"
+      },
+      {
+        "name": "Device Detail Page Route",
+        "passed": true,
+        "details": "Status: 200"
+      },
+      {
+        "name": "Diagnosis Detail Page Route",
+        "passed": true,
+        "details": "Status: 200"
+      }
+    ],
+    "Grafana": [
+      {
+        "name": "Health Endpoint",
+        "passed": true,
+        "details": "Status: ok"
+      },
+      {
+        "name": "Dashboard Retrieval (p311-operations)",
+        "passed": true,
+        "details": "UID: p311-operations, Title: P_311 \u2014 IoT Fault Diagnosis Operations"
+      },
+      {
+        "name": "Panel Count Verification (13 Panels)",
+        "passed": true,
+        "details": "Configured Panels: 13"
+      },
+      {
+        "name": "Panel 13 Alerts Table Configuration",
+        "passed": true,
+        "details": "Panel Title: System Alerts & Notifications (P20)"
+      }
+    ],
+    "Alerts": [
+      {
+        "name": "Normal Telemetry Suppression (0 Alerts)",
+        "passed": true,
+        "details": "Alert count unchanged (0)"
+      },
+      {
+        "name": "Warning Alert Threshold Detection",
+        "passed": true,
+        "details": "Warning alert persisted: 1"
+      },
+      {
+        "name": "Cooldown Deduplication Suppression",
+        "passed": true,
+        "details": "Duplicate warning suppressed"
+      },
+      {
+        "name": "Immediate Critical Escalation",
+        "passed": true,
+        "details": "Critical alert generated: 1"
+      },
+      {
+        "name": "Sensor Plausibility Anomaly Detection",
+        "passed": true,
+        "details": "System anomaly alerts: 1"
+      },
+      {
+        "name": "Operator Alert Acknowledgement",
+        "passed": true,
+        "details": "Alert ID: 41, Ack By: chief_operator"
+      }
+    ],
+    "E2E": [
+      {
+        "name": "Manual Diagnosis Generation & Persistence",
+        "passed": true,
+        "details": "Diag ID: diag-ESP32_001-1790805434625"
+      },
+      {
+        "name": "PostgreSQL Telemetry Persistence",
+        "passed": true,
+        "details": "Latest DB Reading: 98.2|8.7"
+      },
+      {
+        "name": "Real-Time Alert Detection from Stream",
+        "passed": true,
+        "details": "Alerts: WARNING|humidity; CRITICAL|pressure"
+      },
+      {
+        "name": "REST API Latest Diagnosis Serving",
+        "passed": true,
+        "details": "Latest ID: diag-ESP32_001-1790805434625"
+      },
+      {
+        "name": "REST API Latest Alert Serving",
+        "passed": true,
+        "details": "Latest Alert: High ambient humidity (82.0% >= 80.0%). Elevated moisture condensation risk in enclosure."
+      },
+      {
+        "name": "Normal Telemetry Zero False Alerts",
+        "passed": true,
+        "details": "Alerts generated: 0"
+      }
+    ],
+    "Failures": [
+      {
+        "name": "Invalid JWT Handling (401)",
+        "passed": true,
+        "details": "Status: 401"
+      },
+      {
+        "name": "Malformed Auth Header Handling (401)",
+        "passed": true,
+        "details": "Status: 401"
+      },
+      {
+        "name": "Non-Existent Resource (404 Not Found)",
+        "passed": true,
+        "details": "Status: 404"
+      },
+      {
+        "name": "Empty Query Result Clean Handling",
+        "passed": true,
+        "details": "Total Elements: 0"
+      },
+      {
+        "name": "Garbage Binary MQTT Ingestion Resilience",
+        "passed": true,
+        "details": "Spring Boot unaffected"
+      }
+    ],
+    "Performance": [
+      {
+        "name": "REST API Average Latency",
+        "passed": true,
+        "details": "7.0 ms (sampled 5 calls)"
+      },
+      {
+        "name": "PostgreSQL Query Average Latency",
+        "passed": true,
+        "details": "73.78 ms (sampled 5 queries)"
+      },
+      {
+        "name": "React HTML Initial Load Latency",
+        "passed": true,
+        "details": "8.57 ms"
+      },
+      {
+        "name": "Grafana API Latency",
+        "passed": true,
+        "details": "3.25 ms"
+      }
+    ],
+    "Security": [
+      {
+        "name": "Database Password Hashing (BCrypt Only)",
+        "passed": true,
+        "details": "Sampled 4 passwords, 100% BCrypt"
+      },
+      {
+        "name": "User DTO Hash Redaction",
+        "passed": true,
+        "details": "Zero password fields exposed in API"
+      },
+      {
+        "name": "Source Code Secret Leak Scan",
+        "passed": true,
+        "details": "Private keys leaked: 0"
+      }
+    ]
+  },
+  "defects": [],
+  "performance": {
+    "ai_diagnosis_latency_s": 43.51,
+    "mqtt_burst_latency_s": 1.59,
+    "rest_api_avg_ms": 7.0,
+    "db_query_avg_ms": 73.78,
+    "react_load_ms": 8.57,
+    "grafana_health_ms": 3.25
+  },
+  "regression_counts": {}
+}
